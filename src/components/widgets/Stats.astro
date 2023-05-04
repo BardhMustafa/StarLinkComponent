@@ -1,0 +1,57 @@
+---
+interface Item {
+  name: string;
+  value: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  items?: Array<Item>;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+  items = [],
+} = Astro.props;
+---
+
+<div class="px-8 py-4 md:py-16 sm:px-10 mx-auto md:px-24 lg:px-12 lg:py-20 max-w-6xl" id="contact">
+  {
+    (title || subtitle || highlight) && (
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        {highlight && (
+          <p class="text-sm text-center text-primary dark:text-blue-200 font-semibold tracking-wide uppercase">
+            {highlight}
+          </p>
+        )}
+        {title && (
+          <h2
+            class="max-w-lg mb-4 text-xl font-bold leading-none tracking-tight sm:text-2xl md:mx-auto font-heading text-center"
+            set:html={title}
+          />
+        )}
+        {subtitle && (
+          <p class="max-w-3xl mx-auto text-center text-sm text-muted dark:text-slate-400" set:html={subtitle} />
+        )}
+      </div>
+    )
+  }
+  <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+    {
+      items.map(({ name, value }) => (
+        <div class="text-center md:border-r md:last:border-none dark:md:border-slate-500 mb-12 md:mb-0 px-4">
+          <div class="text-lg font-bold lg:text-2xl xl:text-3xl text-primary dark:text-blue-600 font-heading">
+            {value}
+          </div>
+          <p class="text-xs font-medium tracking-widest text-gray-800 dark:text-slate-400 uppercase lg:text-sm">
+            {name}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

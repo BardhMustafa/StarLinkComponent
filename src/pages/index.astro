@@ -1,0 +1,211 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+// import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+// import LatestPosts from '~/components/blog/LatestPosts.astro';
+
+import Stats from '~/components/widgets/Stats.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Products', href: '#products' }}
+    callToAction2={{ text: 'Benefits', href: '#benefits' }}
+    image={{ src: import('~/assets/images/hero.jpeg'), alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Powering Your Innovations with <span class="hidden lg:inline"> <br class="2xl:hidden" /></span>
+      <span class="text-accent dark:text-white highlight"> Quality Electronic</span> Components
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>Your Reliable Source for Semiconductors and
+      Passive Components
+    </Fragment>
+  </Hero2>
+
+  <Note />
+
+  <Features2
+    title="Our Products"
+    subtitle="Empower Your Electronics with Cutting-Edge Semiconductors and Passive Components"
+    highlight="Components"
+    items={[
+      {
+        title: 'Microcontrollers',
+        description:
+          'Integrated circuits that combine a microprocessor with memory and other peripherals. They are commonly used to control and manage various electronic systems.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Transistors',
+        description:
+          ' Semiconductor devices that amplify or switch electronic signals and currents. They are fundamental building blocks of modern electronic devices.',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Diodes',
+        description:
+          'Electronic components that allow current to flow in one direction while blocking it in the opposite direction. They are used in rectification, signal modulation, and protection circuits.',
+        icon: 'flat-color-icons:todo-list',
+      },
+      {
+        title: 'Capacitors',
+        description:
+          ' Passive components that store and release electrical energy. They are used for energy storage, noise filtering, voltage regulation, and coupling applications.',
+      },
+      {
+        title: 'Resistors',
+        description:
+          'Components that limit the flow of electrical current. They are used to control current, divide voltages, and adjust signal levels in electronic circuits.',
+      },
+      {
+        title: 'Integrated Circuits (ICs)',
+        description:
+          'Miniaturized electronic circuits consisting of multiple interconnected semiconductor devices. They can perform various functions such as amplification, logic operations, and data processing.',
+      },
+      {
+        title: 'Inductors',
+        description:
+          'Passive components that store energy in a magnetic field when current flows through them. They are used in applications involving signal filtering, energy storage, and magnetic field generation.',
+      },
+      {
+        title: 'Voltage Regulators',
+        description:
+          'Electronic devices that maintain a steady output voltage despite changes in input voltage or load conditions. They ensure stable and regulated power supply to other components in a circuit.',
+      },
+      {
+        title: 'Memory Chips (RAM, ROM, Flash)',
+        description:
+          'Semiconductor devices used for data storage. RAM (Random Access Memory) provides temporary data storage, ROM (Read-Only Memory) stores permanent data, and Flash memory offers rewritable non-volatile storage.',
+      },
+    ]}
+  />
+  <Features
+    highlight="StarLink components"
+    title="Benefits of chips"
+    items={[
+      [
+        {
+          title: 'Improved Performance',
+          description:
+            "Computer chips can significantly enhance your computer's performance, allowing you to run multiple programs and applications without any lag.",
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Faster Processing',
+          description:
+            'With high-performance computer chips, you can expect faster processing speeds, resulting in faster load times and improved productivity.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Energy Efficiency',
+          description:
+            'Modern computer chips are designed to be energy-efficient, which can lead to lower power consumption and ultimately, lower electricity bills.',
+          icon: 'tabler:rocket',
+        },
+      ],
+      [
+        {
+          title: 'Improved Graphics',
+          description:
+            'For gamers and graphic designers, computer chips can help to improve graphics and display quality, resulting in a more immersive and visually stunning experience.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Increased Storage',
+          description:
+            'High-capacity computer chips can offer increased storage, allowing you to store more files, documents, and media.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Better Security',
+          description:
+            'Modern computer chips come equipped with built-in security features, such as encryption and secure booting, which can help protect your computer and data from cyber threats.',
+          icon: 'tabler:rocket',
+        },
+      ],
+    ]}
+  />
+
+  <Content
+    highlight="Services"
+    title="What we offer?"
+    items={[
+      {
+        title: 'Product Sourcing',
+        description:
+          'Access to a wide range of suppliers and manufacturers, allowing distributors to source and provide specific  semiconductors and passive components based on customer requirements.',
+      },
+      {
+        title: 'Inventory Management',
+        description:
+          'Maintaining an extensive inventory of semiconductors and passive components to ensure availability and quick delivery of products to customers.',
+      },
+      {
+        title: 'Obsolescence Management',
+        description:
+          ' Assisting customers in managing obsolete or end-of-life components by offering alternative solutions or finding compatible replacements.',
+      },
+      {
+        title: 'Just-in-Time (JIT) Delivery',
+        description:
+          'Providing JIT delivery services to meet tight production schedules, reducing lead times, and minimizing inventory costs.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/logo.jpeg'),
+      alt: 'Colorful Image',
+    }}
+  />
+  <Content2
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Trusted Canadian Company',
+      },
+      {
+        title: 'Extensive Product Selection',
+      },
+      {
+        title: 'Reliable Inventory and Prompt Delivery',
+      },
+      {
+        title: 'Exceptional Customer Service',
+      },
+      {
+        title: 'Committed to Quality and Compliance',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/about.jpeg'),
+      alt: 'Vintage Image',
+    }}
+  />
+
+  <Stats
+    items={[
+      { value: 'Phone', name: '5149276023' },
+      { value: ' ', name: '' },
+      { value: ' ', name: '' },
+      { value: 'Email', name: ' sales@starlinkcomponents.com' },
+    ]}
+  />
+</Layout>
