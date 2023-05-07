@@ -12,7 +12,7 @@ const CONFIG = {
     'Starlink Components is a global stocking distributor of electronic components with three offices worldwide. ',
   defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'dark', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
   textDirection: 'ltr',
