@@ -10,7 +10,7 @@ import Content from '~/components/widgets/Content.astro';
 // import LatestPosts from '~/components/blog/LatestPosts.astro';
 
 import Stats from '~/components/widgets/Stats.astro';
-
+import Form from '~/components/widgets/Form.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import Content2 from '~/components/widgets/Content2.astro';
 
@@ -19,6 +19,8 @@ const meta = {
   description: SITE.description,
   dontUseTitleTemplate: true,
 };
+
+
 ---
 
 <Layout {meta}>
@@ -197,4 +199,5 @@ const meta = {
       { value: 'Email', name: ' sales@starlinkcomponents.com' },
     ]}
   />
+  <Form />
 </Layout>
