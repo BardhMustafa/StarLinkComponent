@@ -1,0 +1,198 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayoutFr.astro';
+
+import NoteFr from '~/components/widgets/NoteFr.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import FormFr from '~/components/widgets/FormFr.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content2 from '~/components/widgets/Content2.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Des produits', href: '#products' }}
+    callToAction2={{ text: 'Avantages', href: '#benefits' }}
+    image={{ src: import('~/assets/images/hero.jpeg'), alt: 'AstroWind Hero Image' }}
+  >
+    <Fragment slot="title">
+      Propulsez vos innovations avec <span class="hidden lg:inline"> <br class="2xl:hidden" /></span>
+      <span class="text-accent dark:text-white highlight"> des composants électroniques de qualité</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"></span>Votre source fiable pour les semi-conducteurs et
+      composants passifs
+    </Fragment>
+  </Hero2>
+
+  <NoteFr />
+
+  <Features2
+    title="Nos produits"
+    subtitle="Renforcez votre électronique avec des semi-conducteurs et des composants passifs de pointe"
+    highlight="Composants"
+    items={[
+      {
+        title: 'Microcontrôleurs',
+        description:
+          "Circuits intégrés qui combinent un microprocesseur avec de la mémoire et d'autres périphériques. Ils sont couramment utilisés pour contrôler et gérer divers systèmes électroniques.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Transistors',
+        description:
+          'Dispositifs à semi-conducteurs qui amplifient ou commutent des signaux et des courants électroniques. Ce sont des composants fondamentaux des appareils électroniques modernes.',
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Diodes',
+        description:
+          'Composants électroniques qui permettent au courant de circuler dans un sens tout en le bloquant dans le sens opposé. Ils sont utilisés dans les circuits de redressement, de modulation de signal et de protection.',
+        icon: 'flat-color-icons:todo-list',
+      },
+      {
+        title: 'Condensateurs',
+        description:
+          "Composants passifs qui stockent et libèrent de l'énergie électrique. Ils sont utilisés pour le stockage d'énergie, le filtrage du bruit, la régulation de tension et les applications de couplage.",
+      },
+      {
+        title: 'Résistances',
+        description:
+          'Composants qui limitent la circulation du courant électrique. Ils sont utilisés pour contrôler le courant, diviser les tensions et ajuster les niveaux de signal dans les circuits électroniques.',
+      },
+      {
+        title: 'Circuits intégrés (CI)',
+        description:
+          "Circuits électroniques miniaturisés constitués de plusieurs dispositifs semi-conducteurs interconnectés. Ils peuvent effectuer diverses fonctions telles que l'amplification, les opérations logiques et le traitement des données.",
+      },
+      {
+        title: 'Inducteurs',
+        description:
+          "Composants passifs qui stockent de l'énergie dans un champ magnétique lorsqu'un courant les traverse. Ils sont utilisés dans des applications impliquant le filtrage de signaux, le stockage d'énergie et la génération de champs magnétiques.",
+      },
+      {
+        title: 'Régulateurs de tension',
+        description:
+          "Appareils électroniques qui maintiennent une tension de sortie constante malgré les changements de tension d'entrée ou des conditions de charge. Ils assurent une alimentation stable et régulée des autres composants d'un circuit.",
+      },
+      {
+        title: 'Puces de mémoire (RAM, ROM, Flash)',
+        description:
+          'Dispositifs semi-conducteurs utilisés pour le stockage de données. La RAM (Random Access Memory) fournit un stockage de données temporaire, la ROM (Read-Only Memory) stocke des données permanentes et la mémoire Flash offre un stockage non volatile réinscriptible.',
+      },
+    ]}
+  />
+  <Features
+    highlight="Composants StarLink"
+    title="Avantages des puces"
+    items={[
+      [
+        {
+          title: 'Performance améliorée',
+          description:
+            "Les puces informatiques peuvent améliorer considérablement les performances de votre ordinateur, vous permettant d'exécuter plusieurs programmes et applications sans aucun décalage.",
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Traitement plus rapide',
+          description:
+            'Avec des puces informatiques hautes performances, vous pouvez vous attendre à des vitesses de traitement plus rapides, ce qui se traduit par des temps de chargement plus rapides et une productivité améliorée.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Efficacité énergétique',
+          description:
+            "Les puces informatiques modernes sont conçues pour être économes en énergie, ce qui peut réduire la consommation d'énergie et, en fin de compte, réduire les factures d'électricité.",
+          icon: 'tabler:rocket',
+        },
+      ],
+      [
+        {
+          title: 'Graphiques améliorés',
+          description:
+            "Pour les joueurs et les graphistes, les puces informatiques peuvent aider à améliorer les graphismes et la qualité d'affichage, ce qui se traduit par une expérience plus immersive et visuellement époustouflante.",
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Stockage accru',
+          description:
+            'Les puces informatiques haute capacité peuvent offrir un stockage accru, vous permettant de stocker plus de fichiers, de documents et de supports.',
+          icon: 'tabler:rocket',
+        },
+        {
+          title: 'Meilleure sécurité',
+          description:
+            'Les puces informatiques modernes sont équipées de fonctions de sécurité intégrées, telles que le cryptage et le démarrage sécurisé, qui peuvent aider à protéger votre ordinateur et vos données contre les cybermenaces.',
+          icon: 'tabler:rocket',
+        },
+      ],
+    ]}
+  />
+
+  <Content
+    highlight="Prestations de service"
+    title="Ce que nous offrons?"
+    items={[
+      {
+        title: 'Approvisionnement de produits',
+        description:
+          "Accès à un large éventail de fournisseurs et de fabricants, permettant aux distributeurs de s'approvisionner et de fournir des semi-conducteurs et des composants passifs spécifiques en fonction des besoins des clients.",
+      },
+      {
+        title: "Gestion de l'inventaire",
+        description:
+          'Maintenir un vaste inventaire de semi-conducteurs et de composants passifs pour assurer la disponibilité et la livraison rapide des produits aux clients.',
+      },
+      {
+        title: 'Obsolescence Management',
+        description:
+          'Accompagner les clients dans la gestion des composants obsolètes ou en fin de vie en proposant des solutions alternatives ou en trouvant des remplacements compatibles.',
+      },
+      {
+        title: 'Livraison juste à temps (JAT)',
+        description:
+          "Fournir des services de livraison juste à temps pour respecter des calendriers de production serrés, réduire les délais et minimiser les coûts d'inventaire.",
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/logo.jpeg'),
+      alt: 'Colorful Image',
+    }}
+  />
+  <Content2
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'À propos de nous',
+        description:
+          "Starlink Components est un distributeur mondial de stockage de composants électroniques avec trois bureaux dans le monde. Depuis notre création, nous nous sommes engagés à fournir des composants de haute qualité à nos clients du monde entier. L'objectif de notre entreprise est de fournir des services fiables et efficaces à nos clients. Nous avons une équipe de professionnels expérimentés et compétents qui se consacrent à fournir un service client exceptionnel. Nous croyons en l'établissement de relations à long terme avec nos clients et nous nous efforçons d'apporter de la valeur à chaque interaction. En tant que distributeur de stockage, nous proposons une large gamme de composants électroniques des principaux fabricants. Notre inventaire est constamment mis à jour pour nous assurer que nous avons les derniers produits disponibles. Nous proposons une large gamme de produits, notamment des semi-conducteurs, des composants passifs, des connecteurs et des composants électromécaniques. Nous avons trois bureaux stratégiquement situés dans différentes parties du monde pour mieux servir nos clients. Nos bureaux sont situés au Canada, en Allemagne et à Hong Kong, chacun étant doté de professionnels de la vente expérimentés qui sont prêts à vous aider avec vos besoins en composants. Chez Starlink Components, nous nous engageons à fournir à nos clients des produits de haute qualité, un service client exceptionnel et des prix compétitifs. Nous sommes fiers de notre capacité à répondre rapidement aux besoins de nos clients et à leur fournir les solutions dont ils ont besoin. Merci de considérer Starlink Components pour vos besoins en composants électroniques. Nous attendons avec impatience l'opportunité de vous servir et de vous fournir les produits et services de qualité que vous méritez",
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/about.jpeg'),
+      alt: 'Vintage Image',
+    }}
+  />
+
+  <Stats
+    items={[
+      { value: ' ', name: '' },
+      { value: 'Téléphone', name: '+15149276023' },
+      { value: 'E-mail', name: ' sales@starlinkcomponents.com' },
+    ]}
+  />
+  <FormFr />
+</Layout>

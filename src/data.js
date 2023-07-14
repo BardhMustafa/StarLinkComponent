@@ -62,3 +62,68 @@ export const footerData = {
  All rights reserved.
      `,
 };
+
+// import { getPermalink, getAsset } from './utils/permalinks';
+
+export const headerDataFrench = {
+  links: [
+    {
+      text: 'Accueil',
+      href: '/',
+    },
+    {
+      text: 'Produits',
+      href: '#products',
+    },
+    {
+      text: 'Services',
+      href: '#services',
+    },
+    {
+      text: 'À propos de nous',
+      href: '#about',
+    },
+    {
+      text: 'Contact',
+      href: '#contact',
+    },
+  ],
+};
+
+export const footerDataFrench = {
+  links: [
+    {
+      title: 'Explorer',
+      links: [
+        { text: 'Accueil', href: '/' },
+        { text: 'Produits', href: '#products' },
+        { text: 'Services', href: '#services' },
+        { text: 'À propos de nous', href: '#about' },
+        { text: 'Contact', href: '#contact' },
+      ],
+    },
+    {
+      title: '',
+      links: [],
+    },
+    {
+      title: 'Connecter',
+      links: [
+        { text: 'Twitter', href: 'https://twitter.com/example' },
+        { text: 'LinkedIn', href: 'https://linkedin.com/company/example' },
+        { text: 'Instagram', href: 'https://instagram.com/example' },
+        { text: 'Facebook', href: 'https://facebook.com/example' },
+      ],
+    },
+  ],
+  secondaryLinks: [],
+  socialLinks: [
+    { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: '#' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
+  ],
+  footNote: `
+       <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 float-left rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
+ Tous droits réservés.
+     `,
+};

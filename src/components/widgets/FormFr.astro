@@ -1,0 +1,68 @@
+---
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+
+  // Get the form data
+  const form = event.target;
+  const formData = new FormData(form);
+
+  try {
+    // Send a POST request to the serverless function to send the email
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      // Show a success message if the email was sent successfully
+      alert('Message sent successfully!');
+    } else {
+      // Show an error message if there was a problem sending the email
+      alert('Failed to send message.');
+    }
+  } catch (error) {
+    // Show an error message if there was a problem sending the request
+    alert('Failed to send message.');
+  }
+};
+---
+
+<section class="bg-white dark:bg-gray-800 border-blue-500">
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-white py-8 text-center">Contactez-nous</h2>
+  <form class="bg-white dark:bg-gray-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto">
+    <div class="mb-4">
+      <label class="block text-gray-700 dark:text-gray-300 font-bold mb-2" for="name"> Nom</label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700"
+        id="name"
+        type="text"
+        placeholder="Entrez votre nom"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 dark:text-gray-300 font-bold mb-2" for="email"> E-mail</label>
+      <input
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700"
+        id="email"
+        type="email"
+        placeholder="Entrer votre Email"
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 dark:text-gray-300 font-bold mb-2" for="message"> Message</label>
+      <textarea
+        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 leading-tight focus:outline-none focus:shadow-outline dark:bg-gray-700"
+        id="message"
+        rows="4"
+        placeholder="Entrez votre message"></textarea>
+    </div>
+    <div class="flex items-center justify-between">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit"
+      >
+        Envoyer
+      </button>
+    </div>
+  </form>
+</section>
