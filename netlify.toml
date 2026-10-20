@@ -1,7 +1,5 @@
-# Netlify detects Next.js and applies its Next.js runtime (OpenNext adapter)
-# automatically: static pages go to the CDN, the RFQ Server Action and
-# middleware run as functions. This file overrides any build settings left
-# in the Netlify UI from the old Astro site (npm run build → dist).
+# Netlify build for the Next.js site. These settings override anything left in
+# the Netlify UI from the old Astro site (npm run build → dist).
 
 [build]
   command = "pnpm build"
@@ -10,3 +8,43 @@
 [build.environment]
   # Next.js 15 needs Node ≥ 18.18 and pnpm 10 ≥ 18.12; the project targets 20.11+.
   NODE_VERSION = "22"
+
+# Next.js runtime (OpenNext adapter): serves the prerendered pages from the CDN
+# and runs middleware, the RFQ Server Action and OG images as functions.
+# Declared explicitly so a stale framework setting in the UI can't skip it —
+# without it Netlify publishes .next as plain files and every URL 404s.
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# --- Redirects ---------------------------------------------------------------
+# The Next middleware also detects the language; these make the entry point
+# work at the CDN edge and retire URLs from the old Astro site.
+
+# Root → language home (Netlify matches the Accept-Language header).
+[[redirects]]
+  from = "/"
+  to = "/fr"
+  status = 302
+  conditions = { Language = ["fr"] }
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+
+# Old Astro pages without a direct replacement.
+[[redirects]]
+  from = "/terms"
+  to = "/en"
+  status = 301
+
+[[redirects]]
+  from = "/rss.xml"
+  to = "/en"
+  status = 301
+
+# Old pages that moved under a locale prefix.
+[[redirects]]
+  from = "/privacy"
+  to = "/en/privacy"
+  status = 301
