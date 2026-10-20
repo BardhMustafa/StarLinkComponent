@@ -5,13 +5,19 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 
-export function LocaleSwitcher({ tone = "paper" }: { tone?: "paper" | "ink" }) {
+type LocaleSwitcherProps = {
+  tone?: "paper" | "ink";
+  /** "nav" adds a landmark; use "div" for repeats (e.g. the footer). */
+  as?: "nav" | "div";
+};
+
+export function LocaleSwitcher({ tone = "paper", as: Wrapper = "nav" }: LocaleSwitcherProps) {
   const t = useTranslations("common");
   const current = useLocale();
   const pathname = usePathname();
 
   return (
-    <nav aria-label={t("language")}>
+    <Wrapper aria-label={t("language")} role={Wrapper === "div" ? "group" : undefined}>
       <ul className="flex font-mono text-[13px]">
         {routing.locales.map((locale) => {
           const active = locale === current;
@@ -40,6 +46,6 @@ export function LocaleSwitcher({ tone = "paper" }: { tone?: "paper" | "ink" }) {
           );
         })}
       </ul>
-    </nav>
+    </Wrapper>
   );
 }

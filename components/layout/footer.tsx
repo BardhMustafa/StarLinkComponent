@@ -88,7 +88,7 @@ export async function Footer() {
           <span className="uppercase">
             {t("footer.copyright", { year: new Date().getFullYear() })}
           </span>
-          <LocaleSwitcher />
+          <LocaleSwitcher as="div" />
         </Container>
       </div>
     </footer>
