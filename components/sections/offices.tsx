@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/container";
+import { MaskReveal, Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { OFFICES } from "@/content/offices";
 
@@ -8,30 +9,30 @@ export async function Offices({ id = "offices" }: { id?: string }) {
   return (
     <section id={id} aria-labelledby={`${id}-title`} className="scroll-mt-20 surface-ink">
       <Container className="section-y">
-        <SectionHeading
-          id={`${id}-title`}
-          tone="ink"
-          index={t("home.offices.index")}
-          title={t("home.offices.titleA")}
-          muted={t("home.offices.titleB")}
-          className="mb-14 sm:mb-[72px]"
-        />
+        <Reveal className="mb-14 sm:mb-[72px]">
+          <SectionHeading
+            id={`${id}-title`}
+            tone="ink"
+            index={t("home.offices.index")}
+            title={t("home.offices.titleA")}
+            muted={t("home.offices.titleB")}
+          />
+        </Reveal>
         <ul className="grid gap-y-14 md:grid-cols-3">
-          {OFFICES.map((office) => (
+          {OFFICES.map((office, i) => (
             <li key={office.id} className="flex flex-col gap-5 md:pr-6">
               <div className="flex items-center" aria-hidden="true">
                 <span className="size-3.5 shrink-0 rounded-full bg-signal shadow-[0_0_0_6px_rgba(212,255,58,0.15)]" />
                 <span className="h-px flex-1 bg-hairline-ink" />
               </div>
-              <div className="overflow-hidden">
-                <p
+              <MaskReveal delay={i * 0.08}>
+                <span
                   aria-hidden="true"
-                  data-office-code
-                  className="font-display text-[clamp(96px,11vw,168px)] leading-[0.85] font-bold tracking-[-0.06em] text-white"
+                  className="block font-display text-[clamp(96px,11vw,168px)] leading-[0.85] font-bold tracking-[-0.06em] text-white"
                 >
                   {office.code}
-                </p>
-              </div>
+                </span>
+              </MaskReveal>
               <div className="flex flex-wrap items-baseline justify-between gap-3 border-t border-hairline-ink pt-4">
                 <h3 className="text-xl font-semibold text-white">
                   {t(`offices.${office.id}.country`)}

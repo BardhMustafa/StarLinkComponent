@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import type React from "react";
 import { ChipPill } from "@/components/graphics/chip-pill";
 import { Container } from "@/components/layout/container";
 import { buttonVariants } from "@/components/ui/button";
@@ -7,6 +8,31 @@ import { Link } from "@/i18n/navigation";
 import { SearchConsole } from "./search-console";
 
 const STATS = ["hubs", "categories", "turnaround"] as const;
+
+/** Each word rises from its own mask; words of one phrase share a delay. */
+function MaskedWords({
+  text,
+  delay,
+  className,
+}: {
+  text: string;
+  delay: number;
+  className?: string;
+}) {
+  const words = text.split(" ");
+  return (
+    <span className={className}>
+      {words.map((word, i) => (
+        <span key={i}>
+          <span className="mask-word" style={{ "--d": `${delay}ms` } as React.CSSProperties}>
+            <span>{word}</span>
+          </span>
+          {i < words.length - 1 ? " " : null}
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export async function Hero() {
   const t = await getTranslations("home.hero");
@@ -20,14 +46,16 @@ export async function Hero() {
         </div>
 
         <h1 id="hero-title" className="text-h1 text-balance">
-          <span data-line>{t("titleA")}</span> <ChipPill /> <span data-line>{t("titleB")}</span>{" "}
-          <span data-line className="text-accent">
-            {t("titleC")}
-          </span>
+          <MaskedWords text={t("titleA")} delay={0} />{" "}
+          <span className="inline-block anim-pill align-middle [--d:160ms]">
+            <ChipPill />
+          </span>{" "}
+          <MaskedWords text={t("titleB")} delay={80} />{" "}
+          <MaskedWords text={t("titleC")} delay={160} className="text-accent" />
         </h1>
 
         <div className="mt-12 grid gap-x-14 gap-y-10 sm:mt-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.5fr)]">
-          <div className="flex min-w-0 flex-col justify-between gap-8">
+          <div className="flex min-w-0 anim-fade-up flex-col justify-between gap-8 [--d:220ms]">
             <p className="max-w-[460px] text-lg leading-[1.55] text-text-2 sm:text-xl">
               {t("sub")}
             </p>
@@ -54,7 +82,7 @@ export async function Hero() {
             </dl>
           </div>
 
-          <SearchConsole />
+          <SearchConsole className="anim-fade-up [--d:300ms]" />
         </div>
       </Container>
     </section>

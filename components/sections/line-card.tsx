@@ -3,6 +3,7 @@ import { PcbChip } from "@/components/graphics/pcb-chip";
 import { Container } from "@/components/layout/container";
 import { ArrowBadge } from "@/components/ui/arrow-badge";
 import { buttonVariants } from "@/components/ui/button";
+import { Reveal, StaggerItem, StaggerList } from "@/components/motion/reveal";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { CATEGORY_PRODUCTS } from "@/content/categories";
@@ -31,7 +32,7 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
     >
       <Container className={cn(withHeading && "pt-[clamp(72px,10vw,120px)] pb-10")}>
         {withHeading && (
-          <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+          <Reveal className="mb-10 flex flex-wrap items-end justify-between gap-6">
             <SectionHeading
               id="line-card-title"
               index={t("home.lineCard.index")}
@@ -41,12 +42,12 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
             <Link href="/products" className={buttonVariants({ variant: "outline" })}>
               {t("home.lineCard.full")} <span aria-hidden="true">↗</span>
             </Link>
-          </div>
+          </Reveal>
         )}
 
-        <ul className="grid gap-4 md:grid-cols-6 lg:grid-cols-3">
+        <StaggerList className="grid gap-4 md:grid-cols-6 lg:grid-cols-3">
           {/* §01 Semiconductors — big ink tile */}
-          <li className="md:col-span-6 lg:col-span-2 lg:row-span-2">
+          <StaggerItem className="md:col-span-6 lg:col-span-2 lg:row-span-2">
             <Link
               href="/products/semiconductors"
               className={cn(
@@ -75,10 +76,10 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
                 </ul>
               </div>
             </Link>
-          </li>
+          </StaggerItem>
 
           {/* §02 Passives — cobalt */}
-          <li className="md:col-span-3 lg:col-span-1">
+          <StaggerItem className="md:col-span-3 lg:col-span-1">
             <Link
               href="/products/passives"
               className={cn(tileBase, "h-full min-h-[262px] surface-accent")}
@@ -94,10 +95,10 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
                 <p className="text-[15px] text-[#E6E9FF]">{t("categories.passives.summary")}</p>
               </div>
             </Link>
-          </li>
+          </StaggerItem>
 
           {/* §03 Connectors — white */}
-          <li className="md:col-span-3 lg:col-span-1">
+          <StaggerItem className="md:col-span-3 lg:col-span-1">
             <Link
               href="/products/connectors"
               className={cn(tileBase, "h-full min-h-[262px] border border-hairline bg-panel")}
@@ -113,10 +114,10 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
                 <p className="text-[15px] text-muted">{t("categories.connectors.summary")}</p>
               </div>
             </Link>
-          </li>
+          </StaggerItem>
 
           {/* §04 Electromechanical — white */}
-          <li className="md:col-span-3 lg:col-span-1">
+          <StaggerItem className="md:col-span-3 lg:col-span-1">
             <Link
               href="/products/electromechanical"
               className={cn(tileBase, "h-full min-h-[240px] border border-hairline bg-panel")}
@@ -139,10 +140,10 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
                 </p>
               </div>
             </Link>
-          </li>
+          </StaggerItem>
 
           {/* §05 Obsolete & EOL — wide muted */}
-          <li className="md:col-span-3 lg:col-span-2">
+          <StaggerItem className="md:col-span-3 lg:col-span-2">
             <Link
               href="/products/obsolete-eol"
               className={cn(
@@ -158,8 +159,8 @@ export async function LineCard({ withHeading = true, headingLevel = "h3" }: Line
               </div>
               <ArrowBadge direction="right" tone="ink" size="lg" />
             </Link>
-          </li>
-        </ul>
+          </StaggerItem>
+        </StaggerList>
       </Container>
     </section>
   );

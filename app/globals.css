@@ -133,6 +133,52 @@
 }
 
 /* ------------------------------------------------------------------------
+   Hero load sequence — pure CSS so the H1 (LCP) never waits for hydration.
+   Each word sits in a mask; --d is the phrase delay (80ms steps).
+   ------------------------------------------------------------------------ */
+@keyframes mask-up {
+  from {
+    transform: translate3d(0, 110%, 0);
+  }
+}
+@keyframes pill-in {
+  from {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+@keyframes fade-up {
+  from {
+    transform: translate3d(0, 16px, 0);
+    opacity: 0;
+  }
+}
+
+@utility mask-word {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  /* room for ascenders/descenders at line-height 0.94 */
+  padding-block: 0.06em 0.2em;
+  margin-block: -0.06em -0.2em;
+  & > span {
+    display: inline-block;
+    animation: mask-up 900ms var(--ease-precise) both;
+    animation-delay: var(--d, 0ms);
+  }
+}
+
+@utility anim-pill {
+  animation: pill-in 700ms var(--ease-precise) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@utility anim-fade-up {
+  animation: fade-up 800ms var(--ease-precise) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* ------------------------------------------------------------------------
    Base
    ------------------------------------------------------------------------ */
 @layer base {
@@ -189,6 +235,7 @@
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;

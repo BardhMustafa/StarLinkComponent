@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/container";
+import { Reveal } from "@/components/motion/reveal";
 import { MonoLabel } from "@/components/ui/mono-label";
 import { COMPANY } from "@/content/site";
 import { RfqForm } from "./rfq-form";
@@ -10,7 +11,7 @@ export async function RfqBlock() {
   return (
     <section aria-labelledby="rfq-title">
       <Container className="section-y">
-        <div className="grid items-center gap-12 rounded-[36px] surface-accent p-[clamp(20px,5vw,72px)] lg:grid-cols-2">
+        <Reveal className="grid items-center gap-12 rounded-[36px] surface-accent p-[clamp(20px,5vw,72px)] lg:grid-cols-2">
           <div className="flex min-w-0 flex-col gap-7">
             <MonoLabel className="text-accent-soft">{t("index")}</MonoLabel>
             <h2
@@ -32,7 +33,7 @@ export async function RfqBlock() {
             </div>
           </div>
           <RfqForm variant="quick" className="[--ring:var(--color-accent)]" />
-        </div>
+        </Reveal>
       </Container>
     </section>
   );

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/container";
+import { StaggerItem, StaggerList } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
 
 const STEPS = ["send", "quote", "dock"] as const;
@@ -9,11 +10,11 @@ export async function Process({ className }: { className?: string }) {
   return (
     <section aria-label={t("label")} className={className}>
       <Container>
-        <ol className="grid gap-4 md:grid-cols-3">
+        <StaggerList ordered className="grid gap-4 md:grid-cols-3">
           {STEPS.map((step, i) => {
             const last = i === STEPS.length - 1;
             return (
-              <li
+              <StaggerItem
                 key={step}
                 className={cn(
                   "flex flex-col gap-10 rounded-3xl p-7",
@@ -41,10 +42,10 @@ export async function Process({ className }: { className?: string }) {
                     {t(`steps.${step}.body`)}
                   </p>
                 </div>
-              </li>
+              </StaggerItem>
             );
           })}
-        </ol>
+        </StaggerList>
       </Container>
     </section>
   );

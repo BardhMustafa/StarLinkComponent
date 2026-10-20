@@ -6,6 +6,8 @@ import type { ReactNode } from "react";
 import { AnnouncementBar } from "@/components/layout/announcement-bar";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { MotionProvider } from "@/components/motion/motion-provider";
+import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { Toaster } from "@/components/ui/toaster";
 import { COMPANY, SITE_URL } from "@/content/site";
 import { routing } from "@/i18n/routing";
@@ -60,20 +62,26 @@ export default async function LocaleLayout({
       className={`${interTight.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
         <NextIntlClientProvider>
-          <a
-            href="#main"
-            className="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
-          >
-            {t("skipToContent")}
-          </a>
-          <AnnouncementBar />
-          <Header />
-          <main id="main" tabIndex={-1} className="outline-none">
-            {children}
-          </main>
-          <Footer />
-          <Toaster />
+          <MotionProvider>
+            <a
+              href="#main"
+              className="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+            >
+              {t("skipToContent")}
+            </a>
+            <AnnouncementBar />
+            <Header />
+            <main id="main" tabIndex={-1} className="outline-none">
+              {children}
+            </main>
+            <Footer />
+            <Toaster />
+            <SmoothScroll />
+          </MotionProvider>
         </NextIntlClientProvider>
       </body>
     </html>
