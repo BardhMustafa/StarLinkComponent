@@ -48,7 +48,7 @@ export async function Footer() {
         <nav aria-label={t("footer.label")} className="flex flex-wrap gap-x-14 gap-y-8">
           {columns.map((col) => (
             <div key={col.title} className="flex flex-col gap-1.5">
-              <h2 className="mb-1 text-label text-[11px] text-muted">{col.title}</h2>
+              <h2 className="mb-1 label-mono-sm text-muted">{col.title}</h2>
               <ul className="flex flex-col">
                 {col.links.map((l) => (
                   <li key={l.href}>
@@ -62,7 +62,7 @@ export async function Footer() {
           ))}
           {social.length > 0 && (
             <div className="flex flex-col gap-1.5">
-              <h2 className="mb-1 text-label text-[11px] text-muted">{t("footer.social")}</h2>
+              <h2 className="mb-1 label-mono-sm text-muted">{t("footer.social")}</h2>
               <ul className="flex flex-col">
                 {social.map((s) => (
                   <li key={s.id}>

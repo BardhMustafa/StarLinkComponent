@@ -1,18 +1,26 @@
-import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { use } from "react";
-import { Container } from "@/components/layout/container";
-import { SectionHeading } from "@/components/ui/section-heading";
+import { Hero } from "@/components/sections/hero";
+import { LineCard } from "@/components/sections/line-card";
+import { Offices } from "@/components/sections/offices";
+import { Process } from "@/components/sections/process";
+import { RfqBlock } from "@/components/sections/rfq-block";
+import { Services } from "@/components/sections/services";
+import { Ticker } from "@/components/sections/ticker";
 import type { Locale } from "@/i18n/routing";
 
-export default function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
-  const { locale } = use(params);
+export default async function HomePage({ params }: { params: Promise<{ locale: Locale }> }) {
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = useTranslations("home.lineCard");
 
   return (
-    <Container className="section-y">
-      <SectionHeading index={t("index")} title={t("titleA")} muted={t("titleB")} />
-    </Container>
+    <>
+      <Hero />
+      <Ticker />
+      <LineCard />
+      <Services />
+      <Process className="pb-[clamp(72px,10vw,120px)]" />
+      <Offices />
+      <RfqBlock />
+    </>
   );
 }

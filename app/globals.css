@@ -61,6 +61,16 @@
   }
 }
 
+/* Hover-only pulse along the PCB traces (small SVG, so dashoffset is cheap). */
+@keyframes trace {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* ------------------------------------------------------------------------
    Type scale
    ------------------------------------------------------------------------ */
@@ -88,9 +98,17 @@
   letter-spacing: -0.035em;
 }
 
-@utility text-label {
+@utility label-mono {
   font-family: var(--font-mono);
   font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@utility label-mono-sm {
+  font-family: var(--font-mono);
+  font-size: 11px;
   line-height: 1.4;
   letter-spacing: 0.12em;
   text-transform: uppercase;

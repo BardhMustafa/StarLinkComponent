@@ -26,7 +26,7 @@ export function MobileMenu() {
         <Menu className="size-5" aria-hidden="true" />
       </SheetTrigger>
       <SheetContent closeLabel={t("common.closeMenu")} aria-describedby={undefined}>
-        <SheetTitle className="text-label text-on-ink-faint">{t("nav.menuTitle")}</SheetTitle>
+        <SheetTitle className="label-mono text-on-ink-faint">{t("nav.menuTitle")}</SheetTitle>
         <nav aria-label={t("nav.label")}>
           <NavLinks variant="sheet" onNavigate={close} />
         </nav>

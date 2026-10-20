@@ -29,7 +29,7 @@ export function SectionHeading({
       <Heading
         id={id}
         className={cn(
-          "mt-4 max-w-[22ch] text-balance",
+          "mt-4 max-w-[18ch] text-balance",
           Heading === "h1" ? "text-h1" : "text-h2",
           tone === "ink" && "text-white",
         )}
