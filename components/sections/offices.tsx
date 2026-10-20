@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/layout/container";
 import { MaskReveal, Reveal } from "@/components/motion/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { OFFICES } from "@/content/offices";
+import { formatAddress, OFFICES } from "@/content/offices";
 
 export async function Offices({ id = "offices" }: { id?: string }) {
   const t = await getTranslations();
@@ -41,6 +41,9 @@ export async function Offices({ id = "offices" }: { id?: string }) {
               </div>
               <div className="text-[15px] leading-relaxed text-on-ink-muted">
                 <p>{t(`offices.${office.id}.region`)}</p>
+                {office.address && (
+                  <address className="not-italic">{formatAddress(office.address)}</address>
+                )}
                 {office.phone ? (
                   <a
                     href={`tel:${office.phone.tel}`}

@@ -36,14 +36,21 @@ export async function OrganizationJsonLd({ locale }: { locale: Locale }) {
         areaServed: "Worldwide",
       },
     ],
-    // Offices without a confirmed street address are listed by country only.
+    // Offices without a confirmed address are listed by country only.
     location: OFFICES.map((office) => ({
       "@type": "Place",
       name: `${COMPANY.name} — ${t(`offices.${office.id}.country`)}`,
       address: {
         "@type": "PostalAddress",
         addressCountry: office.country,
-        ...(office.address ? { streetAddress: office.address } : {}),
+        ...(office.address
+          ? {
+              streetAddress: office.address.street,
+              addressLocality: office.address.locality,
+              addressRegion: office.address.region,
+              postalCode: office.address.postalCode,
+            }
+          : {}),
       },
       ...(office.phone ? { telephone: office.phone.tel } : {}),
     })),
