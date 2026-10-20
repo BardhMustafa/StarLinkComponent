@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>StarLink Components — Concept B</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F2F3F5}
+a{color:#0A0E1A;text-decoration:none}a:hover{color:#2A3FFB}
+input::placeholder{color:#8A90A0}
+@keyframes slMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sl-track{animation:slMarquee 45s linear infinite}
+@media (prefers-reduced-motion: reduce){.sl-track{animation:none}}
+</style>
+</helmet>
+<div style="font-family: Inter, system-ui, sans-serif; background: #F2F3F5; color: #0A0E1A; overflow: hidden">
+
+<!-- ANNOUNCEMENT -->
+<div style="background: #0A0E1A; color: #C9CEDA; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em">
+<div style="max-width: 1360px; margin: 0 auto; padding: 10px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; align-items: center">
+<span style="display: flex; align-items: center; gap: 10px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #D4FF3A; display: inline-block"></span>SHORTAGE &amp; END-OF-LIFE PARTS — QUOTED WITHIN [X] HOURS</span>
+<a href="#rfq" style="color: #FFFFFF">START AN RFQ →</a>
+</div>
+</div>
+
+<!-- NAV -->
+<header style="border-bottom: 1px solid #D9DCE3">
+<div style="max-width: 1360px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px">
+<svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><rect width="34" height="34" rx="9" fill="#0A0E1A"></rect><path d="M17 6c.8 6 4 9.2 11 11-7 1.8-10.2 5-11 11-.8-6-4-9.2-11-11 7-1.8 10.2-5 11-11z" fill="{{accent}}"></path><circle cx="17" cy="17" r="2.4" fill="#FFFFFF"></circle></svg>
+<span style="display: flex; flex-direction: column; line-height: 1">
+<span style="font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.03em">StarLink</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: #5B6275; margin-top: 4px">COMPONENTS</span>
+</span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px; font-size: 15px; font-weight: 500">
+<a href="#line" style="padding: 10px 14px; border-radius: 999px">Line card</a>
+<a href="#services" style="padding: 10px 14px; border-radius: 999px">Services</a>
+<a href="#offices" style="padding: 10px 14px; border-radius: 999px">Offices</a>
+<a href="#rfq" style="padding: 10px 14px; border-radius: 999px">Contact</a>
+</nav>
+<div style="display: flex; align-items: center; gap: 14px">
+<div role="group" aria-label="Language" style="display: flex; gap: 2px; font-family: 'JetBrains Mono', monospace; font-size: 13px">
+<button type="button" aria-pressed="true" style="min-height: 44px; min-width: 44px; border: 0; background: transparent; color: #0A0E1A; font: 600 13px 'JetBrains Mono', monospace; text-decoration: underline; text-underline-offset: 4px; cursor: pointer">EN</button>
+<button type="button" aria-pressed="false" style="min-height: 44px; min-width: 44px; border: 0; background: transparent; color: #5B6275; font: 500 13px 'JetBrains Mono', monospace; cursor: pointer">FR</button>
+</div>
+<a href="#rfq" style="display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 8px 0 20px; border-radius: 999px; background: #0A0E1A; color: #FFFFFF; font-weight: 600; font-size: 15px">Request a quote<span style="width: 32px; height: 32px; border-radius: 50%; background: {{accent}}; display: inline-flex; align-items: center; justify-content: center" aria-hidden="true">↗</span></a>
+</div>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" style="max-width: 1360px; margin: 0 auto; padding: 56px 24px 72px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275; padding-bottom: 28px">
+<span>[ 001 ] GLOBAL STOCKING DISTRIBUTOR</span>
+<span>CANADA · GERMANY · HONG KONG</span>
+</div>
+<h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(52px, 8.6vw, 136px); line-height: 0.94; letter-spacing: -0.055em">Sourcing the parts <span style="display: inline-flex; vertical-align: middle; align-items: center; justify-content: center; width: 1.7em; height: 0.78em; border-radius: 999px; background: #0A0E1A; margin: 0 0.05em" aria-hidden="true"><svg viewBox="0 0 80 36" style="height: 60%" fill="none"><rect x="26" y="4" width="28" height="28" rx="4" fill="{{accent}}"></rect><rect x="34" y="12" width="12" height="12" rx="2" fill="#D4FF3A"></rect><path d="M4 10h22M4 18h22M4 26h22M54 10h22M54 18h22M54 26h22" stroke="#4A5470" stroke-width="2.5" stroke-linecap="round"></path></svg></span> your line <span style="color: {{accent}}">can’t wait for.</span></h1>
+
+<div style="display: flex; flex-wrap: wrap; gap: 32px 56px; margin-top: 56px; align-items: stretch">
+<div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #3A4152; max-width: 460px">Semiconductors, passives, connectors and electromechanical components from leading manufacturers — stocked across three continents and shipped when your build needs them.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<a href="#rfq" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 999px; background: {{accent}}; color: #FFFFFF; font-weight: 600; font-size: 16px">Upload a BOM</a>
+<a href="#line" style="display: inline-flex; align-items: center; min-height: 54px; padding: 0 26px; border-radius: 999px; border: 1.5px solid #0A0E1A; font-weight: 600; font-size: 16px">Explore the line card</a>
+</div>
+<div style="display: flex; gap: 28px; flex-wrap: wrap; border-top: 1px solid #D9DCE3; padding-top: 20px">
+<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.03em">3</div><div style="font-size: 13px; color: #5B6275">stocking hubs</div></div>
+<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.03em">9</div><div style="font-size: 13px; color: #5B6275">product categories</div></div>
+<div><div style="font-family: 'Inter Tight', sans-serif; font-size: 32px; font-weight: 600; letter-spacing: -0.03em">[X]h</div><div style="font-size: 13px; color: #5B6275">quote turnaround</div></div>
+</div>
+</div>
+
+<!-- Search console -->
+<div style="flex: 1.5 1 560px; min-width: 0; background: #0A0E1A; color: #E6E9F0; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 20px; box-shadow: 0 40px 80px -40px rgba(10,14,26,0.6)">
+<div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap">
+<div role="tablist" aria-label="Search mode" style="display: flex; gap: 4px; padding: 4px; border-radius: 999px; background: #161B2B">
+<button type="button" role="tab" aria-selected="true" style="min-height: 40px; padding: 0 18px; border: 0; border-radius: 999px; background: #FFFFFF; color: #0A0E1A; font: 600 14px Inter, sans-serif; cursor: pointer">Part number</button>
+<button type="button" role="tab" aria-selected="false" style="min-height: 40px; padding: 0 18px; border: 0; border-radius: 999px; background: transparent; color: #A9B0C2; font: 500 14px Inter, sans-serif; cursor: pointer">BOM upload</button>
+</div>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A9B0C2; display: flex; align-items: center; gap: 8px"><span style="width: 7px; height: 7px; border-radius: 50%; background: #D4FF3A; display: inline-block"></span>SPECIALISTS ONLINE</span>
+</div>
+<form aria-label="Part search" style="display: flex; flex-wrap: wrap; gap: 10px">
+<label style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 6px; padding: 12px 16px; border-radius: 16px; background: #161B2B; border: 1px solid #262D42">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A9B0C2">PART NUMBER</span>
+<input type="text" value="STM32F103C8T6" style="border: 0; outline: 0; background: transparent; color: #FFFFFF; font: 500 22px 'JetBrains Mono', monospace; min-width: 0">
+</label>
+<label style="flex: 0 1 140px; display: flex; flex-direction: column; gap: 6px; padding: 12px 16px; border-radius: 16px; background: #161B2B; border: 1px solid #262D42">
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #A9B0C2">QTY</span>
+<input type="number" value="2500" style="border: 0; outline: 0; background: transparent; color: #FFFFFF; font: 500 22px 'JetBrains Mono', monospace; width: 100%">
+</label>
+<button type="submit" style="flex: 1 0 100%; min-height: 56px; border: 0; border-radius: 16px; background: {{accent}}; color: #FFFFFF; font: 600 16px Inter, sans-serif; cursor: pointer">Get a quote →</button>
+</form>
+<div style="border-top: 1px solid #262D42; padding-top: 14px">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #8790A6; padding: 0 4px 8px"><span>RECENTLY REQUESTED · EXAMPLE</span><span>STATUS</span></div>
+<sc-for list="{{recent}}" as="r" hint-placeholder-count="3">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 12px 4px; border-top: 1px solid #1B2134">
+<span style="display: flex; gap: 14px; align-items: baseline; flex-wrap: wrap"><span style="font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #FFFFFF">{{r.part}}</span><span style="font-size: 13px; color: #8790A6">{{r.cat}}</span></span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #D4FF3A; padding: 4px 10px; border: 1px solid #3A4A1A; border-radius: 999px">QUOTE ON REQUEST</span>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TICKER -->
+<div aria-hidden="true" style="background: {{accent}}; color: #FFFFFF; overflow: hidden; border-top: 1px solid #0A0E1A; border-bottom: 1px solid #0A0E1A">
+<div class="sl-track" style="display: flex; width: max-content; gap: 40px; padding: 18px 0; font-family: 'JetBrains Mono', monospace; font-size: 15px; letter-spacing: 0.06em; white-space: nowrap">
+<sc-for list="{{ticker}}" as="t" hint-placeholder-count="20">
+<span style="display: inline-flex; align-items: center; gap: 40px">{{t}}<svg width="12" height="12" viewBox="0 0 12 12"><path d="M6 0c.3 2.7 1.6 4 6 6-4.4 2-5.7 3.3-6 6-.3-2.7-1.6-4-6-6 4.4-2 5.7-3.3 6-6z" fill="#D4FF3A"></path></svg></span>
+</sc-for>
+</div>
+</div>
+
+<!-- LINE CARD BENTO -->
+<section id="line" style="max-width: 1360px; margin: 0 auto; padding: 120px 24px 40px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 40px">
+<div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275">[ 002 ] LINE CARD</div>
+<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -0.045em; max-width: 820px">Nine categories. <span style="color: #8A90A0">One purchase order.</span></h2>
+</div>
+<a href="#rfq" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; border: 1.5px solid #0A0E1A; font-weight: 600">Full line card ↗</a>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<!-- Semiconductors -->
+<a href="#rfq" style="flex: 2 1 600px; min-width: 0; min-height: 540px; position: relative; overflow: hidden; border-radius: 28px; background: #0A0E1A; color: #FFFFFF; padding: 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 24px">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #8790A6"><span>§01</span><span>6 FAMILIES</span></div>
+<svg viewBox="0 0 400 300" aria-hidden="true" style="position: absolute; right: -40px; top: 40px; width: 62%; max-width: 460px" fill="none">
+<g stroke="#232B44" stroke-width="2"><path d="M140 90H20M140 130H60V40M140 170H0M140 210H80V290M260 90h140M260 130h80V30M260 170h140M260 210h60v90M180 70V0M220 70V20M180 230v70M220 230v50"></path></g>
+<rect x="140" y="70" width="120" height="160" rx="16" fill="#121831" stroke="{{accent}}" stroke-width="2"></rect>
+<rect x="165" y="105" width="70" height="70" rx="8" fill="{{accent}}"></rect>
+<rect x="185" y="125" width="30" height="30" rx="4" fill="#D4FF3A"></rect>
+<g fill="#4A5A9A"><circle cx="20" cy="90" r="4"></circle><circle cx="60" cy="40" r="4"></circle><circle cx="80" cy="290" r="4"></circle><circle cx="340" cy="30" r="4"></circle><circle cx="320" cy="300" r="4"></circle><circle cx="400" cy="170" r="4"></circle></g>
+</svg>
+<div style="position: relative">
+<h3 style="margin: 0 0 20px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(36px, 4vw, 56px); letter-spacing: -0.04em; line-height: 1">Semiconductors</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; max-width: 520px">
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Microcontrollers</span>
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Integrated circuits</span>
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Memory — RAM, ROM, Flash</span>
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Transistors</span>
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Diodes</span>
+<span style="padding: 8px 14px; border-radius: 999px; border: 1px solid #2D3550; font-size: 14px">Voltage regulators</span>
+</div>
+</div>
+</a>
+
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<a href="#rfq" style="flex: 1 1 auto; min-height: 262px; border-radius: 28px; background: {{accent}}; color: #FFFFFF; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #DCE1FF"><span>§02</span><span>↗</span></div>
+<div>
+<h3 style="margin: 0 0 10px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; line-height: 1">Passives</h3>
+<div style="font-size: 15px; color: #E6E9FF">Capacitors · Resistors · Inductors</div>
+</div>
+</a>
+<a href="#rfq" style="flex: 1 1 auto; min-height: 262px; border-radius: 28px; background: #FFFFFF; border: 1px solid #D9DCE3; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275"><span>§03</span><span>↗</span></div>
+<div>
+<h3 style="margin: 0 0 10px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; line-height: 1">Connectors</h3>
+<div style="font-size: 15px; color: #5B6275">Board-to-board, wire-to-board, RF, I/O</div>
+</div>
+</a>
+</div>
+
+<a href="#rfq" style="flex: 1 1 320px; min-width: 0; min-height: 240px; border-radius: 28px; background: #FFFFFF; border: 1px solid #D9DCE3; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; gap: 20px">
+<div style="display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275"><span>§04</span><span>↗</span></div>
+<div>
+<h3 style="margin: 0 0 10px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 40px; letter-spacing: -0.04em; line-height: 1">Electro​mechanical</h3>
+<div style="font-size: 15px; color: #5B6275">Relays, switches, sensors, fans</div>
+</div>
+</a>
+
+<a href="#rfq" style="flex: 2 1 600px; min-width: 0; min-height: 240px; border-radius: 28px; background: #E4E7EE; padding: 32px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="max-width: 520px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275; margin-bottom: 18px">§05 · OBSOLETE &amp; EOL</div>
+<h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(30px, 3vw, 44px); letter-spacing: -0.04em; line-height: 1.02">Discontinued part? We’ll find the last reels — or a qualified alternative.</h3>
+</div>
+<span style="width: 64px; height: 64px; border-radius: 50%; background: #0A0E1A; color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-size: 24px" aria-hidden="true">→</span>
+</a>
+</div>
+</section>
+
+<!-- SERVICES TABLE -->
+<section id="services" style="max-width: 1360px; margin: 0 auto; padding: 120px 24px">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px; margin-bottom: 48px">
+<div>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #5B6275">[ 003 ] SERVICES</div>
+<h2 style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -0.045em; max-width: 760px">Built around your production schedule.</h2>
+</div>
+<p style="margin: 0; align-self: flex-end; font-size: 17px; line-height: 1.6; color: #3A4152; max-width: 380px">An extension of your purchasing team — not just a catalogue with a checkout.</p>
+</div>
+<div style="border-bottom: 1px solid #0A0E1A">
+<sc-for list="{{services}}" as="s" hint-placeholder-count="4">
+<a href="#rfq" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 40px; padding: 32px 0; border-top: 1px solid #0A0E1A">
+<span style="flex: 0 0 80px; font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #5B6275">{{s.code}}</span>
+<span style="flex: 1 1 320px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(28px, 3vw, 44px); letter-spacing: -0.035em; line-height: 1.05">{{s.name}}</span>
+<span style="flex: 1 1 340px; font-size: 16px; line-height: 1.6; color: #3A4152">{{s.desc}}</span>
+<span style="flex: 0 0 52px; width: 52px; height: 52px; border-radius: 50%; border: 1.5px solid #0A0E1A; display: inline-flex; align-items: center; justify-content: center; font-size: 20px" aria-hidden="true">↗</span>
+</a>
+</sc-for>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section aria-label="How it works" style="max-width: 1360px; margin: 0 auto; padding: 0 24px 120px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<div style="background: #FFFFFF; border: 1px solid #D9DCE3; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 40px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}; font-weight: 600">T + 0</span><div><h3 style="margin: 0 0 8px; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.03em">Send your list</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5B6275">One part number or a full BOM in Excel, CSV or PDF.</p></div></div>
+<div style="background: #FFFFFF; border: 1px solid #D9DCE3; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 40px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: {{accent}}; font-weight: 600">T + [X] HOURS</span><div><h3 style="margin: 0 0 8px; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.03em">Get a firm quote</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #5B6275">Price, stock, date codes and lead time from a named specialist.</p></div></div>
+<div style="background: #0A0E1A; color: #FFFFFF; border-radius: 24px; padding: 28px; display: flex; flex-direction: column; gap: 40px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #D4FF3A; font-weight: 600">T + [X] DAYS</span><div><h3 style="margin: 0 0 8px; font-family: 'Inter Tight', sans-serif; font-size: 26px; letter-spacing: -0.03em">At your dock</h3><p style="margin: 0; font-size: 15px; line-height: 1.6; color: #A9B0C2">Inspected, packed and shipped from the hub nearest you.</p></div></div>
+</div>
+</section>
+
+<!-- OFFICES -->
+<section id="offices" style="background: #0A0E1A; color: #FFFFFF">
+<div style="max-width: 1360px; margin: 0 auto; padding: 120px 24px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #8790A6">[ 004 ] GLOBAL NETWORK</div>
+<h2 style="margin: 16px 0 72px; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(38px, 5vw, 72px); line-height: 1; letter-spacing: -0.045em; max-width: 900px">Three hubs. <span style="color: #8790A6">Every time zone covered.</span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0">
+<sc-for list="{{offices}}" as="o" hint-placeholder-count="3">
+<div style="display: flex; flex-direction: column; gap: 20px; padding-right: 24px">
+<div style="display: flex; align-items: center"><span style="width: 14px; height: 14px; border-radius: 50%; background: #D4FF3A; box-shadow: 0 0 0 6px rgba(212,255,58,0.15); flex: 0 0 auto"></span><span style="flex: 1; height: 1px; background: #2D3550"></span></div>
+<div style="font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(96px, 11vw, 168px); line-height: 0.85; letter-spacing: -0.06em">{{o.code}}</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-top: 1px solid #2D3550; padding-top: 16px; flex-wrap: wrap">
+<span style="font-size: 20px; font-weight: 600">{{o.name}}</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #A9B0C2">{{o.tz}}</span>
+</div>
+<div style="font-size: 15px; color: #A9B0C2; line-height: 1.6">{{o.role}}<br>{{o.contact}}</div>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<!-- RFQ CTA -->
+<section id="rfq" style="max-width: 1360px; margin: 0 auto; padding: 120px 24px">
+<div style="border-radius: 36px; background: {{accent}}; color: #FFFFFF; padding: clamp(28px, 5vw, 72px); display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.12em; color: #DCE1FF">[ 005 ] REQUEST A QUOTE</div>
+<h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: clamp(48px, 7vw, 112px); line-height: 0.92; letter-spacing: -0.055em">Send us your BOM.</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; color: #E6E9FF; max-width: 440px">We’ll come back with pricing, availability and lead time — from the hub nearest you.</p>
+<div style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 15px">
+<a href="mailto:sales@starlinkcomponents.com" style="color: #FFFFFF">sales@starlinkcomponents.com</a>
+<a href="tel:+15149276023" style="color: #FFFFFF">+1 514 927 6023</a>
+</div>
+</div>
+<form aria-label="Request a quote" style="flex: 1 1 440px; min-width: 0; background: #FFFFFF; color: #0A0E1A; border-radius: 24px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px">
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">PART NUMBER<input type="text" placeholder="LM317T" style="min-height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid #D9DCE3; background: #F7F8FA; color: #0A0E1A; font: 500 16px 'JetBrains Mono', monospace"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">QUANTITY<input type="number" placeholder="1000" style="min-height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid #D9DCE3; background: #F7F8FA; color: #0A0E1A; font: 500 16px 'JetBrains Mono', monospace"></label>
+<label style="grid-column: 1 / -1; display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">WORK EMAIL<input type="email" placeholder="you@company.com" style="min-height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid #D9DCE3; background: #F7F8FA; color: #0A0E1A; font: 16px Inter, sans-serif"></label>
+<label style="grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px; border-radius: 14px; border: 1.5px dashed #B8BECB; cursor: pointer; flex-wrap: wrap">
+<span style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600; font-size: 16px">Drop your BOM here</span><span style="font-size: 13px; color: #5B6275">.xlsx · .csv · .pdf — up to 10 MB</span></span>
+<span style="min-height: 40px; padding: 0 16px; border-radius: 999px; background: #0A0E1A; color: #FFFFFF; display: inline-flex; align-items: center; font-size: 14px; font-weight: 600">Browse</span>
+<input type="file" style="position: absolute; width: 1px; height: 1px; opacity: 0">
+</label>
+<button type="submit" style="grid-column: 1 / -1; min-height: 56px; border: 0; border-radius: 999px; background: #0A0E1A; color: #FFFFFF; font: 600 16px Inter, sans-serif; cursor: pointer">Send request →</button>
+</form>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid #D9DCE3">
+<div style="max-width: 1360px; margin: 0 auto; padding: 56px 24px 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; font-size: 15px">
+<p style="margin: 0; max-width: 360px; color: #3A4152; line-height: 1.6">Global stocking distributor of semiconductors, passive, connector and electromechanical components.</p>
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 56px">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">COMPANY</span><a href="#offices">Offices</a><a href="#services">Services</a><a href="#rfq">Contact</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">PRODUCTS</span><a href="#line">Semiconductors</a><a href="#line">Passives</a><a href="#line">Connectors</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.12em; color: #5B6275">SOCIAL</span><a href="#top">LinkedIn</a><a href="#top">X</a></div>
+</nav>
+</div>
+<div aria-hidden="true" style="max-width: 1360px; margin: 0 auto; padding: 40px 24px 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(80px, 19vw, 280px); line-height: 0.78; letter-spacing: -0.07em; color: #DFE2E9; white-space: nowrap">StarLink</div>
+<div style="max-width: 1360px; margin: 0 auto; padding: 20px 24px 28px; border-top: 1px solid #D9DCE3; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #5B6275">
+<span>© 2026 STARLINK COMPONENTS</span>
+<span>EN · FR</span>
+</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#2A3FFB","options":["#2A3FFB","#1E40AF","#5B2BE0","#0A0E1A"]},"$preview":{"width":1440,"height":5600}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var parts = ['MICROCONTROLLERS', 'STM32F103C8T6', 'CAPACITORS', 'LM317T', 'MEMORY', 'ATMEGA328P-AU', 'CONNECTORS', 'GRM188R71H104KA93D', 'DIODES', '1N4148W', 'REGULATORS', 'NE555DR'];
+    return {
+      accent: this.props.accent ?? '#2A3FFB',
+      ticker: parts.concat(parts),
+      recent: [
+        { part: 'STM32F103C8T6', cat: 'Microcontroller' },
+        { part: 'LM317T', cat: 'Voltage regulator' },
+        { part: 'GRM188R71H104KA93D', cat: 'Ceramic capacitor' }
+      ],
+      services: [
+        { code: 'S—01', name: 'Product sourcing', desc: 'Shortage and allocated parts located through a vetted global supplier network.' },
+        { code: 'S—02', name: 'Inventory management', desc: 'We hold buffer stock for you and release it on demand — off your balance sheet.' },
+        { code: 'S—03', name: 'Obsolescence management', desc: 'Last-time buys, EOL stock and cross-referenced alternatives for legacy designs.' },
+        { code: 'S—04', name: 'Just-in-time delivery', desc: 'Scheduled releases timed to your production plan, shipped from the nearest hub.' }
+      ],
+      offices: [
+        { code: 'CA', name: 'Canada', tz: 'UTC−5', role: 'Americas', contact: '+1 514 927 6023' },
+        { code: 'DE', name: 'Germany', tz: 'UTC+1', role: 'Europe', contact: '[Phone · Address]' },
+        { code: 'HK', name: 'Hong Kong', tz: 'UTC+8', role: 'Asia-Pacific', contact: '[Phone · Address]' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
