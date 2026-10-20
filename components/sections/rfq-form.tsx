@@ -1,10 +1,9 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight, Check } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useId, useRef, useState } from "react";
-import { Controller, useForm } from "react-hook-form";
+import { Controller, useForm, type Resolver } from "react-hook-form";
 import { toast } from "sonner";
 import { submitRfq } from "@/app/actions/rfq";
 import { Dropzone } from "@/components/ui/dropzone";
@@ -14,11 +13,10 @@ import { takePendingBom } from "@/lib/pending-bom";
 import {
   HONEYPOT_FIELD,
   RFQ_TEXT_FIELDS,
-  rfqSchema,
   type RfqErrorKey,
   type RfqField,
   type RfqInput,
-} from "@/lib/rfq-schema";
+} from "@/lib/rfq-fields";
 import { normalizePartNumber, parseQuantity } from "@/lib/search";
 import { cn } from "@/lib/utils";
 
@@ -27,6 +25,19 @@ type RfqFormProps = {
   /** Read ?part=&qty=&bom= from the URL after hydration (keeps the page static). */
   prefillFromUrl?: boolean;
   className?: string;
+};
+
+/**
+ * Loads zod + the shared schema on first validation instead of with the page
+ * (keeps ~40 KB of JS off the initial load of every page with a form).
+ */
+let resolverPromise: Promise<Resolver<RfqInput>> | null = null;
+const lazyResolver: Resolver<RfqInput> = async (values, context, options) => {
+  resolverPromise ??= Promise.all([
+    import("@hookform/resolvers/zod"),
+    import("@/lib/rfq-schema"),
+  ]).then(([{ zodResolver }, { rfqSchema }]) => zodResolver(rfqSchema) as Resolver<RfqInput>);
+  return (await resolverPromise)(values, context, options);
 };
 
 const EMPTY = {
@@ -60,7 +71,7 @@ export function RfqForm({ variant, prefillFromUrl = false, className }: RfqFormP
     reset,
     formState: { errors, isSubmitting },
   } = useForm<RfqInput>({
-    resolver: zodResolver(rfqSchema),
+    resolver: lazyResolver,
     defaultValues: { ...EMPTY, form: variant, locale: locale as RfqInput["locale"], bom: null },
     mode: "onTouched",
   });

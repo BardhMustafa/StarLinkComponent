@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Inter_Tight, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -8,11 +9,27 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { MotionProvider } from "@/components/motion/motion-provider";
 import { SmoothScroll } from "@/components/motion/smooth-scroll";
+import { OrganizationJsonLd } from "@/components/seo/json-ld";
 import { Toaster } from "@/components/ui/toaster";
 import { COMPANY, SITE_URL } from "@/content/site";
 import { routing } from "@/i18n/routing";
-import { inter, interTight, jetbrainsMono } from "@/lib/fonts";
 import "../globals.css";
+
+// Fonts are declared here (not in a shared module) so Next emits their
+// <link rel="preload">. Variable fonts, latin subset only — it covers French.
+const interTight = Inter_Tight({
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
+  display: "swap",
+});
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+// Labels and part numbers: not worth competing with the H1 font for bandwidth.
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+  preload: false,
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -80,6 +97,7 @@ export default async function LocaleLayout({
             </main>
             <Footer />
             <Toaster />
+            <OrganizationJsonLd locale={locale} />
             <SmoothScroll />
           </MotionProvider>
         </NextIntlClientProvider>

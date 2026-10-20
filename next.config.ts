@@ -40,6 +40,8 @@ const nextConfig: NextConfig = {
   experimental: {
     // BOM uploads are capped at 4 MB (Vercel rejects bodies over 4.5 MB).
     serverActions: { bodySizeLimit: "4.5mb" },
+    // ~12 KB of CSS inlined into the HTML removes the render-blocking request.
+    inlineCss: true,
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];

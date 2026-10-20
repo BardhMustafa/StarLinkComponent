@@ -20,6 +20,7 @@ const inputClass =
 export function SearchConsole({ className }: { className?: string }) {
   const t = useTranslations("home.console");
   const tf = useTranslations("rfqForm");
+  const tc = useTranslations("common");
   const router = useRouter();
   const errorId = useId();
   const [part, setPart] = useState("");
@@ -162,10 +163,10 @@ export function SearchConsole({ className }: { className?: string }) {
             <li key={example} className="border-t border-[#1B2134]">
               <Link
                 href={`/rfq?${rfqSearchParams({ partNumber: example })}`}
-                aria-label={t("requestPart", { part: example })}
                 className="group flex min-h-12 flex-wrap items-center justify-between gap-2 rounded-lg px-1 py-3 transition-colors hover:bg-ink-2"
               >
                 <span className="flex flex-wrap items-baseline gap-x-3.5 gap-y-1">
+                  <span className="sr-only">{tc("requestQuote")}: </span>
                   <span className="font-mono text-[15px] break-all text-white group-hover:text-signal">
                     {example}
                   </span>

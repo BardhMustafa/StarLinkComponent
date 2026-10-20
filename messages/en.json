@@ -17,7 +17,6 @@
       "fr": "Français"
     },
     "placeholderContact": "[Phone · Address]",
-    "home": "StarLink Components home",
     "email": "Email",
     "phone": "Phone",
     "required": "required",
@@ -98,7 +97,6 @@
       "recent": "Recently requested · example",
       "status": "Status",
       "quoteOnRequest": "Quote on request",
-      "requestPart": "Request a quote for {part}",
       "bomDrop": "Drop your BOM here",
       "bomHint": ".xlsx · .csv · .pdf — up to 4 MB",
       "bomBrowse": "Browse",

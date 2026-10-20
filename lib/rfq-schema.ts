@@ -1,28 +1,20 @@
 import { z } from "zod";
 import { routing } from "@/i18n/routing";
 import { checkBomFile } from "./bom";
+import type { RfqInput } from "./rfq-fields";
 import { PART_NUMBER_MAX, PART_NUMBER_PATTERN, parseQuantity } from "./search";
 
-/**
- * One schema for client (React Hook Form) and server (Server Action).
- * Error messages are keys under messages.rfqForm.errors.
- */
-export type RfqErrorKey =
-  | "partNumber"
-  | "partNumberFormat"
-  | "quantity"
-  | "targetPrice"
-  | "fullName"
-  | "email"
-  | "fileType"
-  | "fileSize"
-  | "tooLong";
+export * from "./rfq-fields";
 
 const text = (max: number) => z.string().trim().max(max, "tooLong");
 
 const isFile = (value: unknown): value is File =>
   typeof File !== "undefined" && value instanceof File;
 
+/**
+ * One schema for client (React Hook Form) and server (Server Action).
+ * Error messages are keys under messages.rfqForm.errors.
+ */
 export const rfqSchema = z
   .object({
     /** "quick" = homepage block (no name field), "full" = /rfq page. */
@@ -69,28 +61,9 @@ export const rfqSchema = z
     }
   });
 
-export type RfqInput = z.input<typeof rfqSchema>;
 export type RfqData = z.output<typeof rfqSchema>;
-export type RfqField = keyof RfqInput;
 
-export const RFQ_TEXT_FIELDS = [
-  "partNumber",
-  "manufacturer",
-  "quantity",
-  "targetPrice",
-  "fullName",
-  "company",
-  "email",
-  "notes",
-] as const satisfies readonly RfqField[];
-
-/** Name of the honeypot input. Bots fill it; people never see it. */
-export const HONEYPOT_FIELD = "website";
-
-export type RfqActionResult =
-  | { ok: true }
-  | {
-      ok: false;
-      error: "validation" | "rateLimited" | "server";
-      fieldErrors?: Partial<Record<RfqField, RfqErrorKey>>;
-    };
+// Keep the hand-written RfqInput (rfq-fields.ts) in sync with the schema.
+type Same<A, B> = [A] extends [B] ? ([B] extends [A] ? true : false) : false;
+const inputMatches: Same<z.input<typeof rfqSchema>, RfqInput> = true;
+void inputMatches;

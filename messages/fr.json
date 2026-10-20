@@ -17,7 +17,6 @@
       "fr": "Français"
     },
     "placeholderContact": "[Téléphone · Adresse]",
-    "home": "Accueil StarLink Components",
     "email": "E-mail",
     "phone": "Téléphone",
     "required": "obligatoire",
@@ -98,7 +97,6 @@
       "recent": "Demandes récentes · exemple",
       "status": "Statut",
       "quoteOnRequest": "Prix sur demande",
-      "requestPart": "Demander un devis pour {part}",
       "bomDrop": "Déposez votre nomenclature ici",
       "bomHint": ".xlsx · .csv · .pdf — 4 Mo maximum",
       "bomBrowse": "Parcourir",

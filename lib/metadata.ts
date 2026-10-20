@@ -29,6 +29,8 @@ type PageMetadataInput = {
   absoluteTitle?: boolean;
   description: string;
   noindex?: boolean;
+  /** Locale-less path of a segment-specific opengraph-image route, if any. */
+  ogImagePath?: string;
 };
 
 export async function pageMetadata({
@@ -38,9 +40,11 @@ export async function pageMetadata({
   absoluteTitle,
   description,
   noindex,
+  ogImagePath = "",
 }: PageMetadataInput): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "meta" });
   const url = localizedUrl(locale, path);
+  const image = `/${locale}${ogImagePath}/opengraph-image`;
   const fullTitle = title
     ? absoluteTitle
       ? title
@@ -58,9 +62,17 @@ export async function pageMetadata({
       title: fullTitle,
       description,
       locale: OG_LOCALE[locale],
+      // A page-level openGraph object replaces the file-based opengraph-image,
+      // so point at the generated route explicitly (see ogImagePath).
+      images: [{ url: image, width: 1200, height: 630, alt: t("siteName") }],
       alternateLocale: routing.locales.filter((l) => l !== locale).map((l) => OG_LOCALE[l]),
     },
-    twitter: { card: "summary_large_image", title: fullTitle, description },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+      images: [image],
+    },
     robots: noindex ? { index: false, follow: true } : undefined,
   };
 }

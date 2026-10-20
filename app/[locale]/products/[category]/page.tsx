@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return pageMetadata({
     locale,
     path: `/products/${category}`,
+    ogImagePath: `/products/${category}`,
     title: t("name"),
     description: t("intro"),
   });

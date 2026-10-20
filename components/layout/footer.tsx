@@ -78,9 +78,7 @@ export async function Footer() {
       </Container>
 
       <Container aria-hidden="true" className="pt-10 select-none">
-        <p className="font-display text-[clamp(80px,19vw,280px)] leading-[0.78] font-bold tracking-[-0.07em] whitespace-nowrap text-[#dfe2e9]">
-          StarLink
-        </p>
+        <div className="font-display text-[clamp(80px,19vw,280px)] leading-[0.78] font-bold tracking-[-0.07em] whitespace-nowrap text-[#dfe2e9] before:content-['StarLink']" />
       </Container>
 
       <div className="border-t border-hairline">

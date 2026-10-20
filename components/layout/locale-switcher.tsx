@@ -30,7 +30,6 @@ export function LocaleSwitcher({ tone = "paper", as: Wrapper = "nav" }: LocaleSw
                 hrefLang={locale}
                 lang={locale}
                 aria-current={active ? "true" : undefined}
-                aria-label={active ? language : t("switchTo", { language })}
                 className={cn(
                   "inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg uppercase underline-offset-4 transition-colors",
                   tone === "paper"
@@ -41,6 +40,10 @@ export function LocaleSwitcher({ tone = "paper", as: Wrapper = "nav" }: LocaleSw
                 )}
               >
                 {locale}
+                <span className="sr-only">
+                  {" — "}
+                  {active ? language : t("switchTo", { language })}
+                </span>
               </Link>
             </li>
           );
