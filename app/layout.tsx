@@ -1,15 +1,6 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { ReactNode } from "react";
 
-export const metadata: Metadata = {
-  title: "StarLink Components",
-  description: "Global stocking distributor of electronic components.",
-};
-
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
-  );
+// The <html> element lives in app/[locale]/layout.tsx so `lang` matches the route.
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return children;
 }

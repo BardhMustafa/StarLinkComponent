@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "siteName": "StarLink Components",
+    "defaultTitle": "StarLink Components — Global stocking distributor of electronic components",
+    "defaultDescription": "Semiconductors, passives, connectors and electromechanical components from leading manufacturers — stocked in Canada, Germany and Hong Kong. Send a part number or a BOM for a quote.",
+    "ogTagline": "Global stocking distributor of electronic components"
+  },
+  "common": {
+    "skipToContent": "Skip to content",
+    "requestQuote": "Request a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "switchTo": "Switch to {language}",
+    "languageNames": {
+      "en": "English",
+      "fr": "Français"
+    },
+    "placeholderContact": "[Phone · Address]",
+    "home": "StarLink Components home",
+    "email": "Email",
+    "phone": "Phone",
+    "required": "required",
+    "optional": "optional"
+  },
+  "announcement": {
+    "text": "Shortage & end-of-life parts — quoted within [X] hours",
+    "cta": "Start an RFQ"
+  },
+  "nav": {
+    "label": "Main",
+    "lineCard": "Line card",
+    "services": "Services",
+    "offices": "Offices",
+    "contact": "Contact",
+    "menuTitle": "Menu"
+  },
+  "footer": {
+    "label": "Footer",
+    "description": "Global stocking distributor of semiconductors, passive, connector and electromechanical components.",
+    "company": "Company",
+    "products": "Products",
+    "social": "Social",
+    "about": "About",
+    "privacy": "Privacy",
+    "copyright": "© {year} StarLink Components"
+  },
+  "ticker": {
+    "microcontrollers": "Microcontrollers",
+    "capacitors": "Capacitors",
+    "memory": "Memory",
+    "connectors": "Connectors",
+    "diodes": "Diodes",
+    "regulators": "Regulators"
+  },
+  "home": {
+    "meta": {
+      "title": "StarLink Components — Sourcing the parts your line can’t wait for",
+      "description": "Global stocking distributor of semiconductors, passives, connectors and electromechanical components. Hubs in Canada, Germany and Hong Kong. Send a part number or BOM for a quote."
+    },
+    "hero": {
+      "index": "[ 001 ] Global stocking distributor",
+      "regions": "Canada · Germany · Hong Kong",
+      "titleA": "Sourcing the parts",
+      "titleB": "your line",
+      "titleC": "can’t wait for.",
+      "sub": "Semiconductors, passives, connectors and electromechanical components from leading manufacturers — stocked across three continents and shipped when your build needs them.",
+      "uploadBom": "Upload a BOM",
+      "explore": "Explore the line card",
+      "statsLabel": "At a glance",
+      "stats": {
+        "hubs": { "value": "3", "label": "stocking hubs" },
+        "categories": { "value": "9", "label": "product categories" },
+        "turnaround": { "value": "[X]h", "label": "quote turnaround" }
+      }
+    },
+    "console": {
+      "label": "Quick quote",
+      "tablist": "Search mode",
+      "partTab": "Part number",
+      "bomTab": "BOM upload",
+      "online": "Specialists online",
+      "partLabel": "Part number",
+      "partPlaceholder": "STM32F103C8T6",
+      "qtyLabel": "Qty",
+      "qtyPlaceholder": "2500",
+      "submit": "Get a quote",
+      "partRequired": "Enter a part number",
+      "recent": "Recently requested · example",
+      "status": "Status",
+      "quoteOnRequest": "Quote on request",
+      "requestPart": "Request a quote for {part}",
+      "bomDrop": "Drop your BOM here",
+      "bomHint": ".xlsx · .csv · .pdf — up to 4 MB",
+      "bomBrowse": "Browse",
+      "bomContinue": "Continue to quote request",
+      "bomSelected": "Selected: {name}",
+      "kinds": {
+        "microcontroller": "Microcontroller",
+        "voltageRegulator": "Voltage regulator",
+        "ceramicCapacitor": "Ceramic capacitor"
+      }
+    },
+    "lineCard": {
+      "index": "[ 002 ] Line card",
+      "titleA": "Nine categories.",
+      "titleB": "One purchase order.",
+      "full": "Full line card"
+    },
+    "services": {
+      "index": "[ 003 ] Services",
+      "title": "Built around your production schedule.",
+      "intro": "An extension of your purchasing team — not just a catalogue with a checkout."
+    },
+    "process": {
+      "label": "How it works",
+      "steps": {
+        "send": {
+          "time": "T + 0",
+          "title": "Send your list",
+          "body": "One part number or a full BOM in Excel, CSV or PDF."
+        },
+        "quote": {
+          "time": "T + [X] hours",
+          "title": "Get a firm quote",
+          "body": "Price, stock, date codes and lead time from a named specialist."
+        },
+        "dock": {
+          "time": "T + [X] days",
+          "title": "At your dock",
+          "body": "Inspected, packed and shipped from the hub nearest you."
+        }
+      }
+    },
+    "offices": {
+      "index": "[ 004 ] Global network",
+      "titleA": "Three hubs.",
+      "titleB": "Every time zone covered."
+    },
+    "rfq": {
+      "index": "[ 005 ] Request a quote",
+      "title": "Send us your BOM.",
+      "body": "We’ll come back with pricing, availability and lead time — from the hub nearest you."
+    }
+  },
+  "categories": {
+    "semiconductors": {
+      "name": "Semiconductors",
+      "meta": "6 families",
+      "summary": "Microcontrollers, integrated circuits, memory, transistors, diodes and voltage regulators.",
+      "intro": "The active parts at the heart of every board — from the MCU that runs your firmware to the regulator that keeps it powered."
+    },
+    "passives": {
+      "name": "Passives",
+      "meta": "3 families",
+      "summary": "Capacitors · Resistors · Inductors",
+      "intro": "The capacitors, resistors and inductors that filter, store, divide and stabilise — in the values and packages your build calls for."
+    },
+    "connectors": {
+      "name": "Connectors",
+      "meta": "Interconnect",
+      "summary": "Board-to-board, wire-to-board, RF, I/O",
+      "intro": "Board-to-board, wire-to-board, RF and I/O connectors from leading manufacturers. Send us the part number and we’ll quote stock and lead time."
+    },
+    "electromechanical": {
+      "name": "Electromechanical",
+      "meta": "Switching & sensing",
+      "summary": "Relays, switches, sensors, fans",
+      "intro": "Relays, switches, sensors and fans for control, protection and cooling. Send us the part number and we’ll quote stock and lead time."
+    },
+    "obsolete": {
+      "name": "Obsolete & EOL",
+      "meta": "Obsolete & EOL",
+      "summary": "Discontinued part? We’ll find the last reels — or a qualified alternative.",
+      "intro": "When a manufacturer discontinues a part, your production doesn’t stop. We help you manage obsolete and end-of-life components by locating remaining stock or finding compatible replacements."
+    }
+  },
+  "products": {
+    "microcontrollers": {
+      "name": "Microcontrollers",
+      "description": "Integrated circuits that combine a microprocessor with memory and other peripherals. They are commonly used to control and manage electronic systems."
+    },
+    "integratedCircuits": {
+      "name": "Integrated circuits",
+      "description": "Miniaturised circuits of interconnected semiconductor devices that perform functions such as amplification, logic operations and data processing."
+    },
+    "memory": {
+      "name": "Memory — RAM, ROM, Flash",
+      "description": "Semiconductor devices for data storage: RAM for temporary storage, ROM for permanent data and Flash for rewritable non-volatile storage."
+    },
+    "transistors": {
+      "name": "Transistors",
+      "description": "Semiconductor devices that amplify or switch electronic signals and currents — fundamental building blocks of modern electronics."
+    },
+    "diodes": {
+      "name": "Diodes",
+      "description": "Components that let current flow in one direction while blocking it in the other. Used in rectification, signal modulation and protection circuits."
+    },
+    "voltageRegulators": {
+      "name": "Voltage regulators",
+      "description": "Devices that hold a steady output voltage despite changes in input voltage or load, keeping the rest of the circuit reliably powered."
+    },
+    "capacitors": {
+      "name": "Capacitors",
+      "description": "Passive components that store and release electrical energy, used for energy storage, noise filtering, voltage regulation and coupling."
+    },
+    "resistors": {
+      "name": "Resistors",
+      "description": "Components that limit the flow of current — used to control current, divide voltages and adjust signal levels."
+    },
+    "inductors": {
+      "name": "Inductors",
+      "description": "Passive components that store energy in a magnetic field, used for signal filtering, energy storage and magnetic field generation."
+    }
+  },
+  "services": {
+    "sourcing": {
+      "name": "Product sourcing",
+      "short": "Shortage and allocated parts located through a vetted global supplier network.",
+      "long": "Access to a wide range of suppliers and manufacturers, so we can source the specific semiconductors and passive components your requirements call for — including parts on shortage or allocation."
+    },
+    "inventory": {
+      "name": "Inventory management",
+      "short": "We hold buffer stock for you and release it on demand — off your balance sheet.",
+      "long": "We maintain an extensive inventory of semiconductors and passive components to ensure availability and quick delivery, and can hold buffer stock for your programmes."
+    },
+    "obsolescence": {
+      "name": "Obsolescence management",
+      "short": "Last-time buys, EOL stock and cross-referenced alternatives for legacy designs.",
+      "long": "We help you manage obsolete and end-of-life components by offering alternative solutions or finding compatible replacements, so legacy designs stay in production."
+    },
+    "jit": {
+      "name": "Just-in-time delivery",
+      "short": "Scheduled releases timed to your production plan, shipped from the nearest hub.",
+      "long": "Just-in-time deliveries that meet tight production schedules, reduce lead times and minimise your inventory costs."
+    }
+  },
+  "offices": {
+    "ca": { "country": "Canada", "region": "Americas" },
+    "de": { "country": "Germany", "region": "Europe" },
+    "hk": { "country": "Hong Kong", "region": "Asia-Pacific" }
+  },
+  "rfqForm": {
+    "label": "Request a quote",
+    "fields": {
+      "partNumber": "Part number",
+      "manufacturer": "Manufacturer",
+      "quantity": "Quantity",
+      "targetPrice": "Target price (USD)",
+      "fullName": "Full name",
+      "company": "Company",
+      "email": "Work email",
+      "bom": "BOM file",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "partNumber": "LM317T",
+      "manufacturer": "Texas Instruments",
+      "quantity": "1000",
+      "targetPrice": "0.42",
+      "fullName": "Jane Smith",
+      "company": "Acme Electronics",
+      "email": "you@company.com",
+      "notes": "Date code requirements, packaging, delivery schedule…"
+    },
+    "bomDrop": "Drop your BOM here",
+    "bomTypes": ".xlsx · .csv · .pdf — up to 4 MB",
+    "browse": "Browse",
+    "removeFile": "Remove file",
+    "honeypot": "Leave this field empty",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "consent": "We use your details only to answer this request. See our privacy notice.",
+    "success": {
+      "title": "Request received.",
+      "body": "Thanks — a specialist will reply to {email} with pricing, availability and lead time. A confirmation is on its way to your inbox.",
+      "again": "Send another request"
+    },
+    "toast": {
+      "success": "Request sent — we’ll be in touch shortly.",
+      "error": "We couldn’t send your request. Please try again or email sales@starlinkcomponents.com."
+    },
+    "errors": {
+      "partNumber": "Enter a part number (or attach a BOM).",
+      "partNumberFormat": "Use letters, digits and - / . # + , only.",
+      "quantity": "Enter a quantity of at least 1.",
+      "targetPrice": "Enter a price such as 0.42.",
+      "fullName": "Enter your name.",
+      "email": "Enter a valid work email.",
+      "fileType": "Upload an .xlsx, .xls, .csv or .pdf file.",
+      "fileSize": "The file must be 4 MB or smaller.",
+      "tooLong": "This is too long.",
+      "rateLimited": "Too many requests. Please wait a few minutes and try again.",
+      "server": "Something went wrong on our side. Please try again or email us directly."
+    }
+  },
+  "pages": {
+    "products": {
+      "title": "Line card",
+      "description": "Semiconductors, passives, connectors, electromechanical and obsolete components — one purchase order, three stocking hubs.",
+      "index": "[ 002 ] Line card",
+      "titleA": "Nine categories.",
+      "titleB": "One purchase order.",
+      "intro": "We carry a broad range of electronic components from leading manufacturers, and our inventory is constantly updated. If it isn’t on the shelf, our sourcing team will find it."
+    },
+    "category": {
+      "index": "[ 002 ] Line card · {name}",
+      "productsHeading": "Product families",
+      "noProducts": "Send us any part number in this category — we’ll quote stock, date codes and lead time.",
+      "requestCta": "Request a quote",
+      "other": "Other categories",
+      "back": "All categories"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Product sourcing, inventory management, obsolescence management and just-in-time delivery for electronic components.",
+      "index": "[ 003 ] Services",
+      "titleA": "Built around your",
+      "titleB": "production schedule.",
+      "intro": "An extension of your purchasing team — not just a catalogue with a checkout."
+    },
+    "about": {
+      "title": "About",
+      "description": "StarLink Components is a global stocking distributor of electronic components with offices in Canada, Germany and Hong Kong.",
+      "index": "[ 006 ] About",
+      "titleA": "A stocking distributor",
+      "titleB": "on three continents.",
+      "p1": "StarLink Components is a global stocking distributor of electronic components with three offices worldwide. Since our establishment, we have been committed to providing high-quality components to customers around the world.",
+      "p2": "As a stocking distributor, we carry a broad range of electronic components from leading manufacturers — semiconductors, passive components, connectors and electromechanical components, among others. Our inventory is constantly updated so the latest products are available.",
+      "p3": "Our offices in Canada, Germany and Hong Kong are each staffed with experienced sales professionals who are ready to help with your component needs.",
+      "p4": "We focus on reliable, efficient service, high-quality products and competitive pricing — and we believe in long-term relationships, delivering value in every interaction.",
+      "valuesLabel": "What we stand for",
+      "values": {
+        "quality": {
+          "title": "Quality components",
+          "body": "Parts from leading manufacturers, inspected before they ship."
+        },
+        "response": {
+          "title": "Fast response",
+          "body": "We take pride in responding quickly with the solution you need."
+        },
+        "pricing": {
+          "title": "Competitive pricing",
+          "body": "Fair, transparent quotes from a named specialist."
+        },
+        "relationships": {
+          "title": "Long-term partnerships",
+          "body": "An extension of your purchasing team, not a one-off transaction."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact StarLink Components — sales@starlinkcomponents.com, +1 514 927 6023. Offices in Canada, Germany and Hong Kong.",
+      "index": "[ 007 ] Contact",
+      "titleA": "Talk to a",
+      "titleB": "component specialist.",
+      "intro": "Email or call the sales team, or send a request for quote and we’ll reply from the hub nearest you.",
+      "salesLabel": "Sales",
+      "officesLabel": "Offices"
+    },
+    "rfq": {
+      "title": "Request a quote",
+      "description": "Send a part number or a full BOM. We’ll reply with pricing, availability and lead time from the hub nearest you.",
+      "index": "[ 005 ] Request a quote",
+      "titleA": "Request",
+      "titleB": "a quote.",
+      "intro": "One part number or a complete BOM. Fields marked * are required.",
+      "asideTitle": "What happens next",
+      "directLabel": "Prefer email?"
+    },
+    "privacy": {
+      "title": "Privacy notice",
+      "description": "How StarLink Components handles the personal data you send through this website.",
+      "index": "[ 008 ] Privacy",
+      "titleA": "Privacy",
+      "titleB": "notice.",
+      "draft": "Draft — pending legal review. Placeholders in [brackets] must be completed before launch.",
+      "sections": {
+        "controller": {
+          "title": "Who we are",
+          "body": "This website is operated by StarLink Components, [registered legal entity name and address]. Contact: sales@starlinkcomponents.com."
+        },
+        "data": {
+          "title": "What we collect",
+          "body": "When you send a request for quote we receive the details you enter — name, company, work email, part numbers, quantities, notes and any BOM file you attach — plus technical data such as your IP address, used to prevent abuse."
+        },
+        "use": {
+          "title": "Why we use it",
+          "body": "To answer your request and prepare a quotation (steps prior to entering into a contract), and to protect the form from spam and abuse (legitimate interest). We do not use your data for advertising and we do not sell it."
+        },
+        "processors": {
+          "title": "Service providers",
+          "body": "The site is hosted by Vercel. Request emails are delivered by Resend. Rate limiting uses Upstash. These providers process data on our behalf and may store it outside your country under appropriate safeguards."
+        },
+        "retention": {
+          "title": "How long we keep it",
+          "body": "We keep quote requests for [retention period], unless a business relationship requires longer retention by law."
+        },
+        "rights": {
+          "title": "Your rights",
+          "body": "You can ask to access, correct or delete your data, object to processing or request portability by emailing sales@starlinkcomponents.com. You may also complain to your data-protection authority."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "body": "We set a single functional cookie (NEXT_LOCALE) to remember your language. We use no analytics or advertising cookies."
+        }
+      }
+    },
+    "notFound": {
+      "title": "Page not found",
+      "index": "[ 404 ] Not found",
+      "titleA": "This part",
+      "titleB": "isn’t on the line card.",
+      "body": "The page you’re looking for doesn’t exist or has moved.",
+      "home": "Back to home"
+    }
+  },
+  "email": {
+    "sales": {
+      "subject": "RFQ · {part} × {qty} · {company}",
+      "subjectBom": "RFQ · BOM attached · {company}",
+      "heading": "New request for quote",
+      "locale": "Site language"
+    },
+    "autoreply": {
+      "subject": "We’ve received your request for quote",
+      "greeting": "Hello {name},",
+      "body": "Thank you for your request. A StarLink Components specialist will come back to you with pricing, availability and lead time from the hub nearest you.",
+      "summary": "Your request",
+      "noPart": "BOM attached",
+      "signoff": "— The StarLink Components sales team"
+    }
+  }
+}

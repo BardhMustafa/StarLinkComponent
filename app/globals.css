@@ -1,1 +1,178 @@
 @import "tailwindcss";
+
+/* ------------------------------------------------------------------------
+   Datasheet design tokens
+   ------------------------------------------------------------------------ */
+@theme {
+  --color-paper: #f2f3f5;
+  --color-panel: #ffffff;
+  --color-panel-2: #e4e7ee;
+  --color-field: #f7f8fa;
+  --color-ink: #0a0e1a;
+  --color-ink-2: #161b2b;
+  --color-ink-3: #262d42;
+  --color-text-2: #3a4152;
+  --color-muted: #5b6275;
+  /* Grey second halves of headings on paper; 3.5:1, display sizes only. */
+  --color-faint: #7a8193;
+  --color-hairline: #d9dce3;
+  --color-hairline-ink: #2d3550;
+  --color-on-ink: #e6e9f0;
+  --color-on-ink-muted: #a9b0c2;
+  --color-on-ink-faint: #8790a6;
+  --color-accent: #2a3ffb;
+  --color-accent-soft: #dce1ff;
+  --color-signal: #d4ff3a;
+  --color-danger: #c4271c;
+
+  --font-display: var(--font-inter-tight), "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, monospace;
+
+  --radius-field: 14px;
+  --radius-card: 24px;
+  --radius-tile: 28px;
+  --radius-block: 36px;
+
+  --container-site: 1360px;
+
+  --ease-precise: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-fade-in: fade-in 200ms ease-out;
+  --animate-sheet-in: sheet-in 320ms var(--ease-precise);
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+  @keyframes sheet-in {
+    from {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------
+   Type scale
+   ------------------------------------------------------------------------ */
+@utility text-h1 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(52px, 8.6vw, 136px);
+  line-height: 0.94;
+  letter-spacing: -0.055em;
+}
+
+@utility text-h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+@utility text-h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+@utility text-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Section rhythm (~120px desktop) */
+@utility section-y {
+  padding-block: clamp(72px, 10vw, 120px);
+}
+
+/* Surfaces set the focus-ring colour so it keeps 3:1 against the background. */
+@utility surface-ink {
+  --ring: var(--color-signal);
+  background-color: var(--color-ink);
+  color: var(--color-on-ink);
+}
+
+@utility surface-accent {
+  --ring: #ffffff;
+  background-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------------------
+   Base
+   ------------------------------------------------------------------------ */
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring, var(--color-accent));
+    outline-offset: 3px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #6b7285;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  /* Lenis */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

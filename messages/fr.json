@@ -1,0 +1,435 @@
+{
+  "meta": {
+    "siteName": "StarLink Components",
+    "defaultTitle": "StarLink Components — Distributeur stockiste international de composants électroniques",
+    "defaultDescription": "Semi-conducteurs, composants passifs, connecteurs et composants électromécaniques des principaux fabricants — en stock au Canada, en Allemagne et à Hong Kong. Envoyez une référence ou une nomenclature pour obtenir un devis.",
+    "ogTagline": "Distributeur stockiste international de composants électroniques"
+  },
+  "common": {
+    "skipToContent": "Aller au contenu",
+    "requestQuote": "Demander un devis",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "switchTo": "Passer en {language}",
+    "languageNames": {
+      "en": "English",
+      "fr": "Français"
+    },
+    "placeholderContact": "[Téléphone · Adresse]",
+    "home": "Accueil StarLink Components",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "required": "obligatoire",
+    "optional": "facultatif"
+  },
+  "announcement": {
+    "text": "Pièces en pénurie et en fin de vie — devis sous [X] heures",
+    "cta": "Lancer une demande de devis"
+  },
+  "nav": {
+    "label": "Principale",
+    "lineCard": "Gamme",
+    "services": "Services",
+    "offices": "Bureaux",
+    "contact": "Contact",
+    "menuTitle": "Menu"
+  },
+  "footer": {
+    "label": "Pied de page",
+    "description": "Distributeur stockiste international de semi-conducteurs, de composants passifs, de connecteurs et de composants électromécaniques.",
+    "company": "Entreprise",
+    "products": "Produits",
+    "social": "Réseaux",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "copyright": "© {year} StarLink Components"
+  },
+  "ticker": {
+    "microcontrollers": "Microcontrôleurs",
+    "capacitors": "Condensateurs",
+    "memory": "Mémoire",
+    "connectors": "Connecteurs",
+    "diodes": "Diodes",
+    "regulators": "Régulateurs"
+  },
+  "home": {
+    "meta": {
+      "title": "StarLink Components — Les composants dont votre ligne a besoin, maintenant",
+      "description": "Distributeur stockiste international de semi-conducteurs, composants passifs, connecteurs et composants électromécaniques. Plateformes au Canada, en Allemagne et à Hong Kong. Envoyez une référence ou une nomenclature pour un devis."
+    },
+    "hero": {
+      "index": "[ 001 ] Distributeur stockiste international",
+      "regions": "Canada · Allemagne · Hong Kong",
+      "titleA": "Les composants",
+      "titleB": "que votre ligne",
+      "titleC": "ne peut pas attendre.",
+      "sub": "Semi-conducteurs, composants passifs, connecteurs et composants électromécaniques des principaux fabricants — en stock sur trois continents et expédiés quand votre production en a besoin.",
+      "uploadBom": "Envoyer une nomenclature",
+      "explore": "Découvrir la gamme",
+      "statsLabel": "En bref",
+      "stats": {
+        "hubs": { "value": "3", "label": "plateformes de stock" },
+        "categories": { "value": "9", "label": "catégories de produits" },
+        "turnaround": { "value": "[X] h", "label": "délai de devis" }
+      }
+    },
+    "console": {
+      "label": "Devis rapide",
+      "tablist": "Mode de recherche",
+      "partTab": "Référence",
+      "bomTab": "Nomenclature",
+      "online": "Spécialistes en ligne",
+      "partLabel": "Référence",
+      "partPlaceholder": "STM32F103C8T6",
+      "qtyLabel": "Qté",
+      "qtyPlaceholder": "2500",
+      "submit": "Obtenir un devis",
+      "partRequired": "Saisissez une référence",
+      "recent": "Demandes récentes · exemple",
+      "status": "Statut",
+      "quoteOnRequest": "Prix sur demande",
+      "requestPart": "Demander un devis pour {part}",
+      "bomDrop": "Déposez votre nomenclature ici",
+      "bomHint": ".xlsx · .csv · .pdf — 4 Mo maximum",
+      "bomBrowse": "Parcourir",
+      "bomContinue": "Continuer vers la demande de devis",
+      "bomSelected": "Fichier : {name}",
+      "kinds": {
+        "microcontroller": "Microcontrôleur",
+        "voltageRegulator": "Régulateur de tension",
+        "ceramicCapacitor": "Condensateur céramique"
+      }
+    },
+    "lineCard": {
+      "index": "[ 002 ] Gamme",
+      "titleA": "Neuf catégories.",
+      "titleB": "Un seul bon de commande.",
+      "full": "Toute la gamme"
+    },
+    "services": {
+      "index": "[ 003 ] Services",
+      "title": "Pensés pour votre calendrier de production.",
+      "intro": "Le prolongement de votre service achats — pas un simple catalogue en ligne."
+    },
+    "process": {
+      "label": "Comment ça marche",
+      "steps": {
+        "send": {
+          "time": "T + 0",
+          "title": "Envoyez votre liste",
+          "body": "Une seule référence ou une nomenclature complète en Excel, CSV ou PDF."
+        },
+        "quote": {
+          "time": "T + [X] heures",
+          "title": "Recevez un devis ferme",
+          "body": "Prix, stock, codes de date et délai, par un spécialiste dédié."
+        },
+        "dock": {
+          "time": "T + [X] jours",
+          "title": "Livré à votre quai",
+          "body": "Inspecté, emballé et expédié depuis la plateforme la plus proche."
+        }
+      }
+    },
+    "offices": {
+      "index": "[ 004 ] Réseau mondial",
+      "titleA": "Trois plateformes.",
+      "titleB": "Tous les fuseaux horaires couverts."
+    },
+    "rfq": {
+      "index": "[ 005 ] Demande de devis",
+      "title": "Envoyez-nous votre nomenclature.",
+      "body": "Nous revenons vers vous avec prix, disponibilité et délai — depuis la plateforme la plus proche."
+    }
+  },
+  "categories": {
+    "semiconductors": {
+      "name": "Semi-conducteurs",
+      "meta": "6 familles",
+      "summary": "Microcontrôleurs, circuits intégrés, mémoire, transistors, diodes et régulateurs de tension.",
+      "intro": "Les composants actifs au cœur de chaque carte — du microcontrôleur qui exécute votre firmware au régulateur qui l’alimente."
+    },
+    "passives": {
+      "name": "Passifs",
+      "meta": "3 familles",
+      "summary": "Condensateurs · Résistances · Inductances",
+      "intro": "Les condensateurs, résistances et inductances qui filtrent, stockent, divisent et stabilisent — dans les valeurs et boîtiers dont votre production a besoin."
+    },
+    "connectors": {
+      "name": "Connecteurs",
+      "meta": "Interconnexion",
+      "summary": "Carte à carte, fil à carte, RF, E/S",
+      "intro": "Connecteurs carte à carte, fil à carte, RF et E/S des principaux fabricants. Envoyez-nous la référence et nous vous indiquerons stock et délai."
+    },
+    "electromechanical": {
+      "name": "Électromécanique",
+      "meta": "Commutation et détection",
+      "summary": "Relais, interrupteurs, capteurs, ventilateurs",
+      "intro": "Relais, interrupteurs, capteurs et ventilateurs pour la commande, la protection et le refroidissement. Envoyez-nous la référence et nous vous indiquerons stock et délai."
+    },
+    "obsolete": {
+      "name": "Obsolètes et fin de vie",
+      "meta": "Obsolètes et fin de vie",
+      "summary": "Pièce abandonnée ? Nous trouvons les dernières bobines — ou une alternative qualifiée.",
+      "intro": "Quand un fabricant arrête une référence, votre production ne s’arrête pas. Nous vous aidons à gérer les composants obsolètes et en fin de vie en localisant le stock restant ou en trouvant des remplacements compatibles."
+    }
+  },
+  "products": {
+    "microcontrollers": {
+      "name": "Microcontrôleurs",
+      "description": "Circuits intégrés qui combinent un microprocesseur avec de la mémoire et d’autres périphériques. Ils sont couramment utilisés pour contrôler et gérer des systèmes électroniques."
+    },
+    "integratedCircuits": {
+      "name": "Circuits intégrés",
+      "description": "Circuits miniaturisés composés de dispositifs semi-conducteurs interconnectés, qui assurent des fonctions comme l’amplification, les opérations logiques et le traitement des données."
+    },
+    "memory": {
+      "name": "Mémoire — RAM, ROM, Flash",
+      "description": "Dispositifs semi-conducteurs de stockage de données : la RAM pour le stockage temporaire, la ROM pour les données permanentes et la Flash pour un stockage non volatil réinscriptible."
+    },
+    "transistors": {
+      "name": "Transistors",
+      "description": "Dispositifs à semi-conducteurs qui amplifient ou commutent des signaux et des courants électroniques — les briques fondamentales de l’électronique moderne."
+    },
+    "diodes": {
+      "name": "Diodes",
+      "description": "Composants qui laissent passer le courant dans un sens et le bloquent dans l’autre. Utilisées dans les circuits de redressement, de modulation de signal et de protection."
+    },
+    "voltageRegulators": {
+      "name": "Régulateurs de tension",
+      "description": "Dispositifs qui maintiennent une tension de sortie stable malgré les variations de tension d’entrée ou de charge, pour une alimentation fiable du reste du circuit."
+    },
+    "capacitors": {
+      "name": "Condensateurs",
+      "description": "Composants passifs qui stockent et restituent l’énergie électrique : stockage d’énergie, filtrage du bruit, régulation de tension et couplage."
+    },
+    "resistors": {
+      "name": "Résistances",
+      "description": "Composants qui limitent la circulation du courant — pour contrôler le courant, diviser les tensions et ajuster les niveaux de signal."
+    },
+    "inductors": {
+      "name": "Inductances",
+      "description": "Composants passifs qui stockent l’énergie dans un champ magnétique, utilisés pour le filtrage de signaux, le stockage d’énergie et la génération de champs magnétiques."
+    }
+  },
+  "services": {
+    "sourcing": {
+      "name": "Approvisionnement",
+      "short": "Pièces en pénurie ou en allocation localisées via un réseau mondial de fournisseurs qualifiés.",
+      "long": "Un accès à un large éventail de fournisseurs et de fabricants pour trouver les semi-conducteurs et composants passifs précis dont vous avez besoin — y compris les pièces en pénurie ou en allocation."
+    },
+    "inventory": {
+      "name": "Gestion des stocks",
+      "short": "Nous conservons un stock tampon pour vous et le libérons à la demande — hors de votre bilan.",
+      "long": "Nous maintenons un vaste stock de semi-conducteurs et de composants passifs pour garantir disponibilité et livraison rapide, et pouvons conserver un stock tampon pour vos programmes."
+    },
+    "obsolescence": {
+      "name": "Gestion de l’obsolescence",
+      "short": "Derniers achats, stock en fin de vie et alternatives croisées pour vos conceptions existantes.",
+      "long": "Nous vous aidons à gérer les composants obsolètes ou en fin de vie en proposant des solutions alternatives ou des remplacements compatibles, pour que vos anciennes conceptions restent en production."
+    },
+    "jit": {
+      "name": "Livraison juste à temps",
+      "short": "Des livraisons programmées selon votre plan de production, depuis la plateforme la plus proche.",
+      "long": "Des livraisons juste à temps pour respecter des calendriers de production serrés, réduire les délais et minimiser vos coûts de stock."
+    }
+  },
+  "offices": {
+    "ca": { "country": "Canada", "region": "Amériques" },
+    "de": { "country": "Allemagne", "region": "Europe" },
+    "hk": { "country": "Hong Kong", "region": "Asie-Pacifique" }
+  },
+  "rfqForm": {
+    "label": "Demande de devis",
+    "fields": {
+      "partNumber": "Référence",
+      "manufacturer": "Fabricant",
+      "quantity": "Quantité",
+      "targetPrice": "Prix cible (USD)",
+      "fullName": "Nom complet",
+      "company": "Entreprise",
+      "email": "E-mail professionnel",
+      "bom": "Nomenclature",
+      "notes": "Remarques"
+    },
+    "placeholders": {
+      "partNumber": "LM317T",
+      "manufacturer": "Texas Instruments",
+      "quantity": "1000",
+      "targetPrice": "0.42",
+      "fullName": "Marie Dupont",
+      "company": "Acme Électronique",
+      "email": "vous@entreprise.com",
+      "notes": "Exigences de code de date, conditionnement, calendrier de livraison…"
+    },
+    "bomDrop": "Déposez votre nomenclature ici",
+    "bomTypes": ".xlsx · .csv · .pdf — 4 Mo maximum",
+    "browse": "Parcourir",
+    "removeFile": "Retirer le fichier",
+    "honeypot": "Laissez ce champ vide",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi…",
+    "consent": "Vos coordonnées servent uniquement à traiter cette demande. Voir notre politique de confidentialité.",
+    "success": {
+      "title": "Demande reçue.",
+      "body": "Merci — un spécialiste répondra à {email} avec prix, disponibilité et délai. Une confirmation arrive dans votre boîte de réception.",
+      "again": "Envoyer une autre demande"
+    },
+    "toast": {
+      "success": "Demande envoyée — nous revenons vers vous très vite.",
+      "error": "Impossible d’envoyer votre demande. Réessayez ou écrivez à sales@starlinkcomponents.com."
+    },
+    "errors": {
+      "partNumber": "Saisissez une référence (ou joignez une nomenclature).",
+      "partNumberFormat": "Utilisez uniquement lettres, chiffres et - / . # + ,",
+      "quantity": "Saisissez une quantité d’au moins 1.",
+      "targetPrice": "Saisissez un prix, par exemple 0.42.",
+      "fullName": "Saisissez votre nom.",
+      "email": "Saisissez une adresse e-mail professionnelle valide.",
+      "fileType": "Joignez un fichier .xlsx, .xls, .csv ou .pdf.",
+      "fileSize": "Le fichier doit faire 4 Mo maximum.",
+      "tooLong": "Ce texte est trop long.",
+      "rateLimited": "Trop de demandes. Patientez quelques minutes puis réessayez.",
+      "server": "Une erreur s’est produite de notre côté. Réessayez ou écrivez-nous directement."
+    }
+  },
+  "pages": {
+    "products": {
+      "title": "Gamme",
+      "description": "Semi-conducteurs, passifs, connecteurs, électromécanique et composants obsolètes — un seul bon de commande, trois plateformes de stock.",
+      "index": "[ 002 ] Gamme",
+      "titleA": "Neuf catégories.",
+      "titleB": "Un seul bon de commande.",
+      "intro": "Nous proposons une large gamme de composants électroniques des principaux fabricants, avec un stock constamment mis à jour. Si une pièce n’est pas en rayon, notre équipe d’approvisionnement la trouve."
+    },
+    "category": {
+      "index": "[ 002 ] Gamme · {name}",
+      "productsHeading": "Familles de produits",
+      "noProducts": "Envoyez-nous n’importe quelle référence de cette catégorie — nous indiquons stock, codes de date et délai.",
+      "requestCta": "Demander un devis",
+      "other": "Autres catégories",
+      "back": "Toutes les catégories"
+    },
+    "services": {
+      "title": "Services",
+      "description": "Approvisionnement, gestion des stocks, gestion de l’obsolescence et livraison juste à temps de composants électroniques.",
+      "index": "[ 003 ] Services",
+      "titleA": "Pensés pour votre",
+      "titleB": "calendrier de production.",
+      "intro": "Le prolongement de votre service achats — pas un simple catalogue en ligne."
+    },
+    "about": {
+      "title": "À propos",
+      "description": "StarLink Components est un distributeur stockiste international de composants électroniques, avec des bureaux au Canada, en Allemagne et à Hong Kong.",
+      "index": "[ 006 ] À propos",
+      "titleA": "Un distributeur stockiste",
+      "titleB": "sur trois continents.",
+      "p1": "StarLink Components est un distributeur stockiste international de composants électroniques avec trois bureaux dans le monde. Depuis notre création, nous nous engageons à fournir des composants de haute qualité à nos clients partout dans le monde.",
+      "p2": "En tant que distributeur stockiste, nous proposons une large gamme de composants électroniques des principaux fabricants — notamment des semi-conducteurs, des composants passifs, des connecteurs et des composants électromécaniques. Notre stock est constamment mis à jour pour vous offrir les derniers produits disponibles.",
+      "p3": "Nos bureaux au Canada, en Allemagne et à Hong Kong comptent chacun des professionnels de la vente expérimentés, prêts à vous accompagner dans vos besoins en composants.",
+      "p4": "Nous misons sur un service fiable et efficace, des produits de haute qualité et des prix compétitifs — et nous croyons aux relations à long terme, en apportant de la valeur à chaque échange.",
+      "valuesLabel": "Nos engagements",
+      "values": {
+        "quality": {
+          "title": "Composants de qualité",
+          "body": "Des pièces des principaux fabricants, inspectées avant expédition."
+        },
+        "response": {
+          "title": "Réponse rapide",
+          "body": "Nous sommes fiers de répondre vite avec la solution dont vous avez besoin."
+        },
+        "pricing": {
+          "title": "Prix compétitifs",
+          "body": "Des devis justes et transparents, par un spécialiste dédié."
+        },
+        "relationships": {
+          "title": "Partenariats durables",
+          "body": "Le prolongement de votre service achats, pas une transaction ponctuelle."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contactez StarLink Components — sales@starlinkcomponents.com, +1 514 927 6023. Bureaux au Canada, en Allemagne et à Hong Kong.",
+      "index": "[ 007 ] Contact",
+      "titleA": "Parlez à un",
+      "titleB": "spécialiste composants.",
+      "intro": "Écrivez ou appelez l’équipe commerciale, ou envoyez une demande de devis : nous répondons depuis la plateforme la plus proche.",
+      "salesLabel": "Ventes",
+      "officesLabel": "Bureaux"
+    },
+    "rfq": {
+      "title": "Demande de devis",
+      "description": "Envoyez une référence ou une nomenclature complète. Nous répondons avec prix, disponibilité et délai depuis la plateforme la plus proche.",
+      "index": "[ 005 ] Demande de devis",
+      "titleA": "Demander",
+      "titleB": "un devis.",
+      "intro": "Une seule référence ou une nomenclature complète. Les champs marqués d’un * sont obligatoires.",
+      "asideTitle": "La suite",
+      "directLabel": "Vous préférez l’e-mail ?"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "description": "Comment StarLink Components traite les données personnelles que vous transmettez via ce site.",
+      "index": "[ 008 ] Confidentialité",
+      "titleA": "Politique de",
+      "titleB": "confidentialité.",
+      "draft": "Brouillon — en attente de validation juridique. Les éléments entre [crochets] doivent être complétés avant la mise en ligne.",
+      "sections": {
+        "controller": {
+          "title": "Qui sommes-nous",
+          "body": "Ce site est exploité par StarLink Components, [raison sociale et adresse du siège]. Contact : sales@starlinkcomponents.com."
+        },
+        "data": {
+          "title": "Données collectées",
+          "body": "Lorsque vous envoyez une demande de devis, nous recevons les informations saisies — nom, entreprise, e-mail professionnel, références, quantités, remarques et toute nomenclature jointe — ainsi que des données techniques comme votre adresse IP, utilisée pour prévenir les abus."
+        },
+        "use": {
+          "title": "Finalités",
+          "body": "Répondre à votre demande et établir un devis (mesures précontractuelles), et protéger le formulaire contre le spam et les abus (intérêt légitime). Nous n’utilisons pas vos données à des fins publicitaires et ne les vendons pas."
+        },
+        "processors": {
+          "title": "Prestataires",
+          "body": "Le site est hébergé par Vercel. Les e-mails de demande sont envoyés via Resend. La limitation de débit utilise Upstash. Ces prestataires traitent les données pour notre compte et peuvent les stocker hors de votre pays avec des garanties appropriées."
+        },
+        "retention": {
+          "title": "Durée de conservation",
+          "body": "Nous conservons les demandes de devis pendant [durée de conservation], sauf obligation légale de conservation plus longue liée à une relation commerciale."
+        },
+        "rights": {
+          "title": "Vos droits",
+          "body": "Vous pouvez demander l’accès, la rectification ou l’effacement de vos données, vous opposer à leur traitement ou demander leur portabilité en écrivant à sales@starlinkcomponents.com. Vous pouvez aussi saisir votre autorité de protection des données."
+        },
+        "cookies": {
+          "title": "Cookies",
+          "body": "Nous utilisons un seul cookie fonctionnel (NEXT_LOCALE) pour mémoriser votre langue. Aucun cookie de mesure d’audience ni publicitaire."
+        }
+      }
+    },
+    "notFound": {
+      "title": "Page introuvable",
+      "index": "[ 404 ] Introuvable",
+      "titleA": "Cette pièce",
+      "titleB": "n’est pas dans notre gamme.",
+      "body": "La page que vous cherchez n’existe pas ou a été déplacée.",
+      "home": "Retour à l’accueil"
+    }
+  },
+  "email": {
+    "sales": {
+      "subject": "RFQ · {part} × {qty} · {company}",
+      "subjectBom": "RFQ · nomenclature jointe · {company}",
+      "heading": "Nouvelle demande de devis",
+      "locale": "Langue du site"
+    },
+    "autoreply": {
+      "subject": "Nous avons bien reçu votre demande de devis",
+      "greeting": "Bonjour {name},",
+      "body": "Merci pour votre demande. Un spécialiste StarLink Components reviendra vers vous avec prix, disponibilité et délai depuis la plateforme la plus proche.",
+      "summary": "Votre demande",
+      "noPart": "Nomenclature jointe",
+      "signoff": "— L’équipe commerciale StarLink Components"
+    }
+  }
+}
