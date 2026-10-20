@@ -8,7 +8,11 @@ const flatten = (obj, prefix = "") =>
   Object.entries(obj).flatMap(([k, v]) =>
     v && typeof v === "object" ? flatten(v, `${prefix}${k}.`) : [[`${prefix}${k}`, String(v)]],
   );
-const args = (s) => [...s.matchAll(/\{(\w+)/g)].map((m) => m[1]).sort().join(",");
+const args = (s) =>
+  [...s.matchAll(/\{(\w+)/g)]
+    .map((m) => m[1])
+    .sort()
+    .join(",");
 
 const base = new Map(flatten(JSON.parse(readFileSync(join(dir, "en.json"), "utf8"))));
 let failed = false;
@@ -17,7 +21,9 @@ for (const file of readdirSync(dir).filter((f) => f.endsWith(".json") && f !== "
   const other = new Map(flatten(JSON.parse(readFileSync(join(dir, file), "utf8"))));
   const missing = [...base.keys()].filter((k) => !other.has(k));
   const extra = [...other.keys()].filter((k) => !base.has(k));
-  const badArgs = [...base.keys()].filter((k) => other.has(k) && args(base.get(k)) !== args(other.get(k)));
+  const badArgs = [...base.keys()].filter(
+    (k) => other.has(k) && args(base.get(k)) !== args(other.get(k)),
+  );
   const asciiQuote = [...other.entries()].filter(([, v]) => v.includes("'")).map(([k]) => k);
 
   for (const [label, keys] of [

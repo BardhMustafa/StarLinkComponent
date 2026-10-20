@@ -69,9 +69,18 @@
       "explore": "Explore the line card",
       "statsLabel": "At a glance",
       "stats": {
-        "hubs": { "value": "3", "label": "stocking hubs" },
-        "categories": { "value": "9", "label": "product categories" },
-        "turnaround": { "value": "[X]h", "label": "quote turnaround" }
+        "hubs": {
+          "value": "3",
+          "label": "stocking hubs"
+        },
+        "categories": {
+          "value": "9",
+          "label": "product categories"
+        },
+        "turnaround": {
+          "value": "[X]h",
+          "label": "quote turnaround"
+        }
       }
     },
     "console": {
@@ -236,9 +245,18 @@
     }
   },
   "offices": {
-    "ca": { "country": "Canada", "region": "Americas" },
-    "de": { "country": "Germany", "region": "Europe" },
-    "hk": { "country": "Hong Kong", "region": "Asia-Pacific" }
+    "ca": {
+      "country": "Canada",
+      "region": "Americas"
+    },
+    "de": {
+      "country": "Germany",
+      "region": "Europe"
+    },
+    "hk": {
+      "country": "Hong Kong",
+      "region": "Asia-Pacific"
+    }
   },
   "rfqForm": {
     "label": "Request a quote",
@@ -425,7 +443,7 @@
     },
     "autoreply": {
       "subject": "We’ve received your request for quote",
-      "greeting": "Hello {name},",
+      "greeting": "Hello,",
       "body": "Thank you for your request. A StarLink Components specialist will come back to you with pricing, availability and lead time from the hub nearest you.",
       "summary": "Your request",
       "noPart": "BOM attached",

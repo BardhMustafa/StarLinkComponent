@@ -69,9 +69,18 @@
       "explore": "Découvrir la gamme",
       "statsLabel": "En bref",
       "stats": {
-        "hubs": { "value": "3", "label": "plateformes de stock" },
-        "categories": { "value": "9", "label": "catégories de produits" },
-        "turnaround": { "value": "[X] h", "label": "délai de devis" }
+        "hubs": {
+          "value": "3",
+          "label": "plateformes de stock"
+        },
+        "categories": {
+          "value": "9",
+          "label": "catégories de produits"
+        },
+        "turnaround": {
+          "value": "[X] h",
+          "label": "délai de devis"
+        }
       }
     },
     "console": {
@@ -236,9 +245,18 @@
     }
   },
   "offices": {
-    "ca": { "country": "Canada", "region": "Amériques" },
-    "de": { "country": "Allemagne", "region": "Europe" },
-    "hk": { "country": "Hong Kong", "region": "Asie-Pacifique" }
+    "ca": {
+      "country": "Canada",
+      "region": "Amériques"
+    },
+    "de": {
+      "country": "Allemagne",
+      "region": "Europe"
+    },
+    "hk": {
+      "country": "Hong Kong",
+      "region": "Asie-Pacifique"
+    }
   },
   "rfqForm": {
     "label": "Demande de devis",
@@ -425,7 +443,7 @@
     },
     "autoreply": {
       "subject": "Nous avons bien reçu votre demande de devis",
-      "greeting": "Bonjour {name},",
+      "greeting": "Bonjour,",
       "body": "Merci pour votre demande. Un spécialiste StarLink Components reviendra vers vous avec prix, disponibilité et délai depuis la plateforme la plus proche.",
       "summary": "Votre demande",
       "noPart": "Nomenclature jointe",
