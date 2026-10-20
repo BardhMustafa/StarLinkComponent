@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Container } from "@/components/layout/container";
 import { MonoLabel } from "@/components/ui/mono-label";
+import { softHyphenate } from "@/lib/typography";
 
 type PageHeroProps = {
   index: string;
@@ -20,15 +21,15 @@ export function PageHero({ index, title, muted, intro, aside, children }: PageHe
         <MonoLabel>{index}</MonoLabel>
         {aside}
       </div>
-      <h1 className="max-w-[14ch] text-h1 text-balance">
+      <h1 className="max-w-[14ch] text-h1 text-balance hyphens-auto">
         <span className="mask-word">
-          <span>{title}</span>
+          <span>{softHyphenate(title)}</span>
         </span>
         {muted ? (
           <>
             {" "}
             <span className="mask-word [--d:80ms]">
-              <span className="text-faint">{muted}</span>
+              <span className="text-faint">{softHyphenate(muted)}</span>
             </span>
           </>
         ) : null}

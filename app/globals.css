@@ -156,6 +156,7 @@
 
 @utility mask-word {
   display: inline-block;
+  max-width: 100%;
   overflow: hidden;
   vertical-align: top;
   /* room for ascenders/descenders at line-height 0.94 */
@@ -163,6 +164,10 @@
   margin-block: -0.06em -0.2em;
   & > span {
     display: inline-block;
+    max-width: 100%;
+    /* Long single words (e.g. "Électromécanique" at 360px) break instead of
+       being clipped by the mask when the browser can't hyphenate. */
+    overflow-wrap: anywhere;
     animation: mask-up 900ms var(--ease-precise) both;
     animation-delay: var(--d, 0ms);
   }
