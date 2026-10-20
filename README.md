@@ -53,24 +53,24 @@ automatically. `pnpm lint` fails if any key or placeholder is missing.
 Open items (turnaround time, DE/HK details, social URLs, legal text…) are tracked in
 [`docs/CONTENT_TODO.md`](docs/CONTENT_TODO.md).
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-1. **Import** the repository in Vercel (framework preset: Next.js; install command
-   `pnpm install`, build command `pnpm build` — both auto-detected).
-2. **Environment variables** (Production + Preview), from [`.env.example`](.env.example):
+Build settings live in [`netlify.toml`](netlify.toml) (Node 22, `pnpm build`, publish
+`.next`); they override anything left in the Netlify UI from the old Astro site. Netlify
+detects Next.js and applies its Next.js runtime automatically — static pages are served
+from the CDN, middleware and the RFQ Server Action run as functions.
+
+1. **Environment variables** (Site configuration → Environment variables), from
+   [`.env.example`](.env.example):
    - `NEXT_PUBLIC_SITE_URL=https://www.starlinkcomponents.com`
    - `RESEND_API_KEY`, `RFQ_TO_EMAIL=sales@starlinkcomponents.com`, `RFQ_FROM_EMAIL`
-   - `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` (Vercel Marketplace → Upstash
-     adds them automatically)
-3. **Resend:** add and verify `starlinkcomponents.com` (DNS: SPF/DKIM records), then set
+   - `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`
+2. **Resend:** add and verify `starlinkcomponents.com` (DNS: SPF/DKIM records), then set
    `RFQ_FROM_EMAIL` to an address on that domain.
-4. **Domains:** add `www.starlinkcomponents.com` (primary) and `starlinkcomponents.com`
-   (redirect to www). Move DNS away from the old host (the previous site also had Netlify
-   config) once the preview is approved.
-5. **Check the preview deployment:** submit a test RFQ, confirm the sales email and the
+3. **Check the deploy preview:** submit a test RFQ, confirm the sales email and the
    auto-reply arrive, and run PageSpeed Insights (mobile) on `/en`, `/fr/products`,
    `/en/rfq`.
-6. In **Google Search Console**, submit `https://www.starlinkcomponents.com/sitemap.xml`.
+4. In **Google Search Console**, submit `https://www.starlinkcomponents.com/sitemap.xml`.
 
 Old URLs: `/` and `/fr` keep working (`/` redirects by browser language). The old blog
 and `/terms` pages are gone and return a localized 404.

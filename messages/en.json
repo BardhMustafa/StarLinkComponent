@@ -407,7 +407,7 @@
         },
         "processors": {
           "title": "Service providers",
-          "body": "The site is hosted by Vercel. Request emails are delivered by Resend. Rate limiting uses Upstash. These providers process data on our behalf and may store it outside your country under appropriate safeguards."
+          "body": "The site is hosted by Netlify. Request emails are delivered by Resend. Rate limiting uses Upstash. These providers process data on our behalf and may store it outside your country under appropriate safeguards."
         },
         "retention": {
           "title": "How long we keep it",

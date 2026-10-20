@@ -407,7 +407,7 @@
         },
         "processors": {
           "title": "Prestataires",
-          "body": "Le site est hébergé par Vercel. Les e-mails de demande sont envoyés via Resend. La limitation de débit utilise Upstash. Ces prestataires traitent les données pour notre compte et peuvent les stocker hors de votre pays avec des garanties appropriées."
+          "body": "Le site est hébergé par Netlify. Les e-mails de demande sont envoyés via Resend. La limitation de débit utilise Upstash. Ces prestataires traitent les données pour notre compte et peuvent les stocker hors de votre pays avec des garanties appropriées."
         },
         "retention": {
           "title": "Durée de conservation",

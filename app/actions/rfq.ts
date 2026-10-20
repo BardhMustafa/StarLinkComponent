@@ -24,7 +24,13 @@ const safeFilename = (name: string) =>
 
 async function clientIp() {
   const h = await headers();
-  return h.get("x-real-ip") ?? h.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  // Netlify sets x-nf-client-connection-ip; Vercel sets x-real-ip.
+  return (
+    h.get("x-nf-client-connection-ip") ??
+    h.get("x-real-ip") ??
+    h.get("x-forwarded-for")?.split(",")[0]?.trim() ??
+    "unknown"
+  );
 }
 
 export async function submitRfq(formData: FormData): Promise<RfqActionResult> {

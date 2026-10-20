@@ -1,6 +1,6 @@
 # StarLink Components — Migration Plan (Astro/AstroWind → Next.js "Datasheet")
 
-Status: **approved 2026-10-20**. All proposals in §6 accepted (Vercel; 4 MB BOM cap; four-point star logo per brief; light only; Upstash rate limit; placeholder /privacy, no /terms; mockup sub-lists for Connectors/Electromechanical flagged; Resend test sender until DNS is verified; Social column hidden until URLs exist).
+Status: **approved 2026-10-20**. All proposals in §6 accepted, except hosting: the site stays on **Netlify** (Q1). Original decisions: (Vercel; 4 MB BOM cap; four-point star logo per brief; light only; Upstash rate limit; placeholder /privacy, no /terms; mockup sub-lists for Connectors/Electromechanical flagged; Resend test sender until DNS is verified; Social column hidden until URLs exist).
 Design reference: `docs/design/concept-b-homepage.html` (source) and `docs/design/concept-b-homepage.webp` (screenshot).
 
 ---
